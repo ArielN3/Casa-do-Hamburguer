@@ -1,3 +1,4 @@
+
 :root {
     --vermelho-chines: #E31837;
     --dourado: #FFD700;
@@ -12,6 +13,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+
+  scroll-behavior: smooth; /* Ativa o scroll suave em toda a página */
+  scroll-padding-top: 80px; /* Compensa cabeçalhos fixos */
 }
 
 body {
@@ -35,6 +42,7 @@ body {
     margin-bottom: 2rem;
     border: 10px solid rgba(0, 0, 0, 0.05);
 }
+
 /* Header CSS 
 header {
     text-align: center;
@@ -54,6 +62,8 @@ header::after {
     border-radius: 3px;
 }
     */
+
+/* Header CSS */
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
@@ -79,18 +89,54 @@ header::after {
   -webkit-text-fill-color: transparent;
 }
 
+/* ========== ESTILOS DA BARRA DE SCROLL ========== */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e63946;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c1121f;
+}
+
 .nav {
   display: flex;
   gap: 20px;
+   position: sticky;
+  top: 0;
+  padding: 15px 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .nav a {
   color: #ccc;
   text-decoration: none;
   font-weight: 500;
-  transition: 0.3s ease;
+  margin: 0 15px;
+  padding: 8px 15px;
+  border-radius: 25px;
+   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
 }
+/*.nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+  position: relative;
+}*/
 
 .nav a::after {
   content: "";
@@ -104,12 +150,37 @@ header::after {
 }
 
 .nav a:hover {
-  color: #fff;
+       background: #e63946;
+  transform: translateY(-3px);
+color:#e7e7e7;
+}
+
+.nav a.active {
+  background: #e63946;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(230, 57, 70, 0.4);
 }
 
 .nav a:hover::after {
   width: 100%;
 }
+
+/* ========== ANIMAÇÃO DE SEÇÕES ========== */
+section {
+  scroll-margin-top: 80px;
+  transition: all 0.6s ease-out;
+}
+
+section:target {
+  animation: highlight 1.5s ease;
+}
+
+@keyframes highlight {
+  0% { background-color: rgba(230, 57, 70, 0.1); }
+  100% { background-color: transparent; }
+}
+
+
 
 /* Menu hamburguer para mobile */
 .menu-icon {
@@ -652,4 +723,27 @@ input:focus, textarea:focus {
     color: #c20202;
     letter-spacing: 1px;
     font-size: 0.9rem;
+}
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 768px) {
+  .nav {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding: 12px 10px;
+  }
+  
+  .nav::-webkit-scrollbar {
+    height: 5px;
+  }
+  
+  .nav a {
+    margin: 0 8px;
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  
+  html {
+    scroll-padding-top: 70px;
+  }
 }
