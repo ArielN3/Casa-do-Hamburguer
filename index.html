@@ -15,21 +15,22 @@
 
 <body>
     <header class="header">
-            <div class="logo">
-                <img src="logo-casa.png" alt="Logo do Restaurante" class="logo-img" />
-                <span class="logo-text">Cardápio Digital</span>
-            </div>
+        <div class="logo">
+            <img src="logo-casa.png" alt="Logo do Restaurante" class="logo-img" />
+            <span class="logo-text">Cardápio Digital</span>
+        </div>
 
-            <input type="checkbox" id="menu-toggle" />
-            <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
 
-            <nav class="nav">
-                <a href="#inicio">Início</a>
-                <a href="#menu">Menu</a>
-                <a href="#sobre">Sobre</a>
-                <a href="#contato">Contato</a>
-            </nav>
-        </header>
+        <nav class="nav">
+            <a href="#Hamburgueres">Hambúrgueres</a>
+            <a href="#adicionais">Adicionais</a>
+            <a href="#bebidas">Bebidas</a>
+            <a href="#acompanhamentos">Acompanhamentos</a>
+        </nav>
+    </header>
+   
     <div class="container">
         <!--
         <header class="restaurant-header">
@@ -39,10 +40,10 @@
             <h3>Sabor que vem da Brasa, paixão em cada mordida</h3>
 
         </header>-->
-        
 
 
-        <section>
+
+        <section id="Hamburgueres">
             <h2>👨‍🍳 Melhores da Casa</h2>
 
             <div class="cardapio-grid">
@@ -367,485 +368,455 @@
                     </div>
                 </div>
 
-                <div class="acompanhamentos-container">
-                    <h2>🍟🍟 ADICIONAIS</h2>
-                    <div class="cardapio-container">
-                        <div class="cardapio-item">
-                            <!-- <div class="card-imagem">
+            </div>
+        </section>
+        <section id="adicionais">
+            <div class="acompanhamentos-container">
+                <h2>🍟🍟 ADICIONAIS</h2>
+                <div class="cardapio-container">
+                    <div class="cardapio-item">
+                        <!-- <div class="card-imagem">
                                  <img src="https://blog-obahortifruti.redeoba.com.br/wp-content/uploads/2022/11/260-88_TEXTO-BLOG-EXTRA-BATATAS-FRESCAS-NOV-22-1920X792.jpg" 
                                     alt="Batata Rústica com Páprica">
                             </div>-->
-                            <div class="card-conteudo">
-                                <h3>Hambúrguer 140g</h3>
-                                <div class="ingredientes">Batatas rústicas temperadas com páprica e ervas.</div>
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 9,00</div>
-                                    <button class="adicionar-btn"
-                                        onclick="adicionarCarrinho('Batata Rústica com Páprica', 12)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
+                        <div class="card-conteudo">
+                            <h3>Hambúrguer 140g</h3>
+                            <div class="ingredientes">Batatas rústicas temperadas com páprica e ervas.</div>
+                            <div class="card-rodape">
+                                <div class="preco">R$ 9,00</div>
+                                <button class="adicionar-btn"
+                                    onclick="adicionarCarrinho('Batata Rústica com Páprica', 12)">
+                                    <span>+</span> Adicionar
+                                </button>
                             </div>
                         </div>
-                        <div class="cardapio-item">
-                            <!--  <div class="card-imagem">
+                    </div>
+                    <div class="cardapio-item">
+                        <!--  <div class="card-imagem">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwHBFauCfSqE9gxI-GV4pwgwNT8LrApNHFew&s"
                                     alt="Onion Rings Crocantes">
                             </div>-->
-                            <div class="card-conteudo">
-                                <h3>Cheddar / Mussarela </h3>
-                                <div class="ingredientes">Anéis de cebola empanados e crocantes.</div>
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 3,00</div>
-                                    <button class="adicionar-btn"
-                                        onclick="adicionarCarrinho('Onion Rings Crocantes', 14)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
+                        <div class="card-conteudo">
+                            <h3>Cheddar / Mussarela </h3>
+                            <div class="ingredientes">Anéis de cebola empanados e crocantes.</div>
+                            <div class="card-rodape">
+                                <div class="preco">R$ 3,00</div>
+                                <button class="adicionar-btn" onclick="adicionarCarrinho('Onion Rings Crocantes', 14)">
+                                    <span>+</span> Adicionar
+                                </button>
                             </div>
                         </div>
-                        <div class="cardapio-item">
-                            <!-- <div class="card-imagem">
+                    </div>
+                    <div class="cardapio-item">
+                        <!-- <div class="card-imagem">
                                  <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2020/05/28/shutterstock224976742-1024x684.jpg"
                                     alt="Molho Sabor & Brasa">
                             </div>-->
-                            <div class="card-conteudo">
-                                <h3>Creme de Cheddar</h3>
-                                <div class="ingredientes">Escolha: Defumado ou Picante.</div>
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 5,00</div>
-                                    <button class="adicionar-btn" onclick="adicionarCarrinho('Molho Sabor & Brasa', 4)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
+                        <div class="card-conteudo">
+                            <h3>Creme de Cheddar</h3>
+                            <div class="ingredientes">Escolha: Defumado ou Picante.</div>
+                            <div class="card-rodape">
+                                <div class="preco">R$ 5,00</div>
+                                <button class="adicionar-btn" onclick="adicionarCarrinho('Molho Sabor & Brasa', 4)">
+                                    <span>+</span> Adicionar
+                                </button>
                             </div>
                         </div>
-                        <div class="cardapio-item">
-                            <!-- <div class="card-imagem">
+                    </div>
+                    <div class="cardapio-item">
+                        <!-- <div class="card-imagem">
                          <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2020/05/28/shutterstock224976742-1024x684.jpg"
                                     alt="Molho Sabor & Brasa">
                             </div>-->
-                            <div class="card-conteudo">
-                                <h3>Picles (pepino / cebola)</h3>
-                                <div class="ingredientes">Escolha: Defumado ou Picante.</div>
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 2,50</div>
-                                    <button class="adicionar-btn" onclick="adicionarCarrinho('Molho Sabor & Brasa', 4)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
+                        <div class="card-conteudo">
+                            <h3>Picles (pepino / cebola)</h3>
+                            <div class="ingredientes">Escolha: Defumado ou Picante.</div>
+                            <div class="card-rodape">
+                                <div class="preco">R$ 2,50</div>
+                                <button class="adicionar-btn" onclick="adicionarCarrinho('Molho Sabor & Brasa', 4)">
+                                    <span>+</span> Adicionar
+                                </button>
                             </div>
                         </div>
-                        <div class="cardapio-item">
-                            <!-- <div class="card-imagem">
+                    </div>
+                    <div class="cardapio-item">
+                        <!-- <div class="card-imagem">
                                 <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2020/05/28/shutterstock224976742-1024x684.jpg"
                                     alt="Molho Sabor & Brasa">
                             </div>-->
-                            <div class="card-conteudo">
-                                <h3>Bacon </h3>
-                                <div class="ingredientes">Escolha: Defumado ou Picante.</div>
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 3,50</div>
-                                    <button class="adicionar-btn" onclick="adicionarCarrinho('Molho Sabor & Brasa', 4)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
+                        <div class="card-conteudo">
+                            <h3>Bacon </h3>
+                            <div class="ingredientes">Escolha: Defumado ou Picante.</div>
+                            <div class="card-rodape">
+                                <div class="preco">R$ 3,50</div>
+                                <button class="adicionar-btn" onclick="adicionarCarrinho('Molho Sabor & Brasa', 4)">
+                                    <span>+</span> Adicionar
+                                </button>
                             </div>
                         </div>
-                        <div class="cardapio-item">
-                            <!--  <div class="card-imagem">
+                    </div>
+                    <div class="cardapio-item">
+                        <!--  <div class="card-imagem">
                                  <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2020/05/28/shutterstock224976742-1024x684.jpg"
                                     alt="Molho Sabor & Brasa">
                             </div>-->
-                            <div class="card-conteudo">
-                                <h3>Geleia de Pimenta</h3>
-                                <div class="ingredientes">Escolha: Defumado ou Picante.</div>
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 5,00</div>
-                                    <button class="adicionar-btn" onclick="adicionarCarrinho('Molho Sabor & Brasa', 4)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
+                        <div class="card-conteudo">
+                            <h3>Geleia de Pimenta</h3>
+                            <div class="ingredientes">Escolha: Defumado ou Picante.</div>
+                            <div class="card-rodape">
+                                <div class="preco">R$ 5,00</div>
+                                <button class="adicionar-btn" onclick="adicionarCarrinho('Molho Sabor & Brasa', 4)">
+                                    <span>+</span> Adicionar
+                                </button>
                             </div>
                         </div>
-                        <div class="cardapio-item">
-                            <!--<div class="card-imagem">
+                    </div>
+                    <div class="cardapio-item">
+                        <!--<div class="card-imagem">
                                  <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2020/05/28/shutterstock224976742-1024x684.jpg"
                                     alt="Molho Sabor & Brasa">
                             </div>-->
-                            <div class="card-conteudo">
-                                <h3>Cebola Caramelizada</h3>
-                                <div class="ingredientes">Escolha: Defumado ou Picante.</div>
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 3,00</div>
-                                    <button class="adicionar-btn" onclick="adicionarCarrinho('Molho Sabor & Brasa', 4)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
+                        <div class="card-conteudo">
+                            <h3>Cebola Caramelizada</h3>
+                            <div class="ingredientes">Escolha: Defumado ou Picante.</div>
+                            <div class="card-rodape">
+                                <div class="preco">R$ 3,00</div>
+                                <button class="adicionar-btn" onclick="adicionarCarrinho('Molho Sabor & Brasa', 4)">
+                                    <span>+</span> Adicionar
+                                </button>
                             </div>
                         </div>
-                        <div class="cardapio-item">
-                            <!--<div class="card-imagem">
+                    </div>
+                    <div class="cardapio-item">
+                        <!--<div class="card-imagem">
                                  <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2020/05/28/shutterstock224976742-1024x684.jpg"
                                     alt="Molho Sabor & Brasa">
                             </div>-->
-                            <div class="card-conteudo">
-                                <h3>Maionese / Molho</h3>
-                                <div class="ingredientes">Escolha: Defumado ou Picante.</div>
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 2,00</div>
-                                    <button class="adicionar-btn" onclick="adicionarCarrinho('Molho Sabor & Brasa', 4)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
+                        <div class="card-conteudo">
+                            <h3>Maionese / Molho</h3>
+                            <div class="ingredientes">Escolha: Defumado ou Picante.</div>
+                            <div class="card-rodape">
+                                <div class="preco">R$ 2,00</div>
+                                <button class="adicionar-btn" onclick="adicionarCarrinho('Molho Sabor & Brasa', 4)">
+                                    <span>+</span> Adicionar
+                                </button>
                             </div>
                         </div>
-                        <div class="cardapio-item">
+                    </div>
+                    <div class="cardapio-item">
 
-                            <div class="card-conteudo">
-                                <h3>Ovo </h3>
-                                <div class="ingredientes">Escolha: Defumado ou Picante.</div>
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 2,00</div>
-                                    <button class="adicionar-btn" onclick="adicionarCarrinho('Molho Sabor & Brasa', 4)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
+                        <div class="card-conteudo">
+                            <h3>Ovo </h3>
+                            <div class="ingredientes">Escolha: Defumado ou Picante.</div>
+                            <div class="card-rodape">
+                                <div class="preco">R$ 2,00</div>
+                                <button class="adicionar-btn" onclick="adicionarCarrinho('Molho Sabor & Brasa', 4)">
+                                    <span>+</span> Adicionar
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section id="bebidas">
+            <div class="bebidas-sobremesas-container">
+                <h2>🥤 BEBIDAS</h2>
+                <div class="cardapio-container">
+                    <div class="cardapio-item">
 
-                <div class="bebidas-sobremesas-container">
-                    <h2>🥤 BEBIDAS</h2>
-                    <div class="cardapio-container">
-                        <div class="cardapio-item">
-
-                            <div class="card-conteudo">
-                                <h3>Sucos Naturais 350ml</h3>
-                                <!--<div class="ingredientes">Lata 350ml</div>-->
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 9,00</div>
-                                    <button class="adicionar-btn" onclick="adicionarCarrinho('Refrigerante Iaia', 6)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cardapio-item">
-
-                            <div class="card-conteudo">
-                                <h3>Suco Caixinha</h3>
-                                <!--<div class="ingredientes">Lata 350ml</div>-->
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 3,00</div>
-                                    <button class="adicionar-btn" onclick="adicionarCarrinho('Suco Natural', 8)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cardapio-item">
-
-                            <div class="card-conteudo">
-                                <h3>Água Mineral</h3>
-                                <!--<div class="ingredientes">Lata 350ml</div>-->
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 3,50</div>
-                                    <button class="adicionar-btn"
-                                        onclick="adicionarCarrinho('Cerveja Artesanal (long neck)', 13)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cardapio-item">
-
-                            <div class="card-conteudo">
-                                <h3>Guaraná Antarctica 1,5L</h3>
-                                <!--<div class="ingredientes">Lata 350ml</div>-->
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 12,00</div>
-                                    <button class="adicionar-btn"
-                                        onclick="adicionarCarrinho('Cerveja Artesanal (long neck)', 13)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cardapio-item">
-
-                            <div class="card-conteudo">
-                                <h3>Coca-Cola 2L</h3>
-                                <!--<div class="ingredientes">Lata 350ml</div>-->
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 12,00</div>
-                                    <button class="adicionar-btn"
-                                        onclick="adicionarCarrinho('Cerveja Artesanal (long neck)', 13)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cardapio-item">
-
-                            <div class="card-conteudo">
-                                <h3>Coca-Cola Lata 310ml</h3>
-                                <!--<div class="ingredientes">Lata 350ml</div>-->
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 13,50</div>
-                                    <button class="adicionar-btn"
-                                        onclick="adicionarCarrinho('Cerveja Artesanal (long neck)', 13)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cardapio-item">
-
-                            <div class="card-conteudo">
-                                <h3>Guaraná Antarctica 350ml</h3>
-                                <!--<div class="ingredientes">Lata 350ml</div>-->
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 5,50</div>
-                                    <button class="adicionar-btn"
-                                        onclick="adicionarCarrinho('Cerveja Artesanal (long neck)', 13)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cardapio-item">
-
-                            <div class="card-conteudo">
-                                <h3>Coca-Cola Retornável 2L</h3>
-                                <!--<div class="ingredientes">Lata 350ml</div>-->
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 5,50</div>
-                                    <button class="adicionar-btn"
-                                        onclick="adicionarCarrinho('Cerveja Artesanal (long neck)', 13)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cardapio-item">
-
-                            <div class="card-conteudo">
-                                <h3>Heineken 330ml</h3>
-                                <!--<div class="ingredientes">Lata 350ml</div>-->
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 10,90</div>
-                                    <button class="adicionar-btn"
-                                        onclick="adicionarCarrinho('Cerveja Artesanal (long neck)', 13)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cardapio-item">
-
-                            <div class="card-conteudo">
-                                <h3>Amstel 350ml</h3>
-                                <!--<div class="ingredientes">Lata 350ml</div>-->
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 9,00</div>
-                                    <button class="adicionar-btn"
-                                        onclick="adicionarCarrinho('Cerveja Artesanal (long neck)', 13)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cardapio-item">
-
-                            <div class="card-conteudo">
-                                <h3>H2OH</h3>
-                                <!--<div class="ingredientes">Lata 350ml</div>-->
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 6,00</div>
-                                    <button class="adicionar-btn"
-                                        onclick="adicionarCarrinho('Cerveja Artesanal (long neck)', 13)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
+                        <div class="card-conteudo">
+                            <h3>Sucos Naturais 350ml</h3>
+                            <!--<div class="ingredientes">Lata 350ml</div>-->
+                            <div class="card-rodape">
+                                <div class="preco">R$ 9,00</div>
+                                <button class="adicionar-btn" onclick="adicionarCarrinho('Refrigerante Iaia', 6)">
+                                    <span>+</span> Adicionar
+                                </button>
                             </div>
                         </div>
                     </div>
+                    <div class="cardapio-item">
 
-                    <h2>🍟ACOMPANHAMENTOS</h2>
-                    <div class="cardapio-container">
-                        <div class="cardapio-item">
-                            <div class="card-imagem">
-                                <img src="https://swiftbr.vteximg.com.br/arquivos/ids/201377-450-450/622291-batata-airfryer-extra-croc-mccain_3.jpg?v=638657204471230000"
-                                    alt="Brownie quente com sorvete">
-                            </div>
-                            <div class="card-conteudo">
-                                <h3>BATATA FRITA 200G</h3>
-                                <!--<div class="ingredientes">Lata 350ml</div>-->
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 10,00</div>
-                                    <button class="adicionar-btn"
-                                        onclick="adicionarCarrinho('Brownie quente com sorvete', 18)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
+                        <div class="card-conteudo">
+                            <h3>Suco Caixinha</h3>
+                            <!--<div class="ingredientes">Lata 350ml</div>-->
+                            <div class="card-rodape">
+                                <div class="preco">R$ 3,00</div>
+                                <button class="adicionar-btn" onclick="adicionarCarrinho('Suco Natural', 8)">
+                                    <span>+</span> Adicionar
+                                </button>
                             </div>
                         </div>
-                        <div class="cardapio-item">
-                            <div class="card-imagem">
-                                <img src="https://swiftbr.vteximg.com.br/arquivos/ids/201377-450-450/622291-batata-airfryer-extra-croc-mccain_3.jpg?v=638657204471230000 "
-                                    alt="Mini churros recheados">
-                            </div>
-                            <div class="card-conteudo">
-                                <h3>BATATA FRITA 350G</h3>
-                                <!--<div class="ingredientes">Lata 350ml</div>-->
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 18,00</div>
-                                    <button class="adicionar-btn"
-                                        onclick="adicionarCarrinho('Mini churros recheados', 16)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
+                    </div>
+                    <div class="cardapio-item">
+
+                        <div class="card-conteudo">
+                            <h3>Água Mineral</h3>
+                            <!--<div class="ingredientes">Lata 350ml</div>-->
+                            <div class="card-rodape">
+                                <div class="preco">R$ 3,50</div>
+                                <button class="adicionar-btn"
+                                    onclick="adicionarCarrinho('Cerveja Artesanal (long neck)', 13)">
+                                    <span>+</span> Adicionar
+                                </button>
                             </div>
                         </div>
-                        <div class="cardapio-item">
-                            <div class="card-imagem">
-                                <img src="https://swiftbr.vteximg.com.br/arquivos/ids/201377-450-450/622291-batata-airfryer-extra-croc-mccain_3.jpg?v=638657204471230000"
-                                    alt="Mini churros recheados">
-                            </div>
-                            <div class="card-conteudo">
-                                <h3>BATATA CHEDDAR E BACON</h3>
-                                <P>PORÇÃO COM 15 UNDS.</P>
-                                <!--<div class="ingredientes">Lata 350ml</div>-->
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 22,99</div>
-                                    <button class="adicionar-btn"
-                                        onclick="adicionarCarrinho('Mini churros recheados', 16)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
+                    </div>
+                    <div class="cardapio-item">
+
+                        <div class="card-conteudo">
+                            <h3>Guaraná Antarctica 1,5L</h3>
+                            <!--<div class="ingredientes">Lata 350ml</div>-->
+                            <div class="card-rodape">
+                                <div class="preco">R$ 12,00</div>
+                                <button class="adicionar-btn"
+                                    onclick="adicionarCarrinho('Cerveja Artesanal (long neck)', 13)">
+                                    <span>+</span> Adicionar
+                                </button>
                             </div>
                         </div>
-                        <div class="cardapio-item">
-                            <div class="card-imagem">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOJWwhHnnuM7idU7ksyzXq7KmcvL6Ndq2NQg&s"
-                                    alt="Mini churros recheados">
+                    </div>
+                    <div class="cardapio-item">
+
+                        <div class="card-conteudo">
+                            <h3>Coca-Cola 2L</h3>
+                            <!--<div class="ingredientes">Lata 350ml</div>-->
+                            <div class="card-rodape">
+                                <div class="preco">R$ 12,00</div>
+                                <button class="adicionar-btn"
+                                    onclick="adicionarCarrinho('Cerveja Artesanal (long neck)', 13)">
+                                    <span>+</span> Adicionar
+                                </button>
                             </div>
-                            <div class="card-conteudo">
-                                <h3>BOLINHAS DE QUEIJO</h3>
-                                <P>PORÇÃO COM 15 UNDS.</P>
-                                <!--<div class="ingredientes">Lata 350ml</div>-->
-                                <div class="card-rodape">
-                                    <div class="preco">R$ 22,00</div>
-                                    <button class="adicionar-btn"
-                                        onclick="adicionarCarrinho('Mini churros recheados', 16)">
-                                        <span>+</span> Adicionar
-                                    </button>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="cardapio-item">
+
+                        <div class="card-conteudo">
+                            <h3>Coca-Cola Lata 310ml</h3>
+                            <!--<div class="ingredientes">Lata 350ml</div>-->
+                            <div class="card-rodape">
+                                <div class="preco">R$ 13,50</div>
+                                <button class="adicionar-btn"
+                                    onclick="adicionarCarrinho('Cerveja Artesanal (long neck)', 13)">
+                                    <span>+</span> Adicionar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardapio-item">
+
+                        <div class="card-conteudo">
+                            <h3>Guaraná Antarctica 350ml</h3>
+                            <!--<div class="ingredientes">Lata 350ml</div>-->
+                            <div class="card-rodape">
+                                <div class="preco">R$ 5,50</div>
+                                <button class="adicionar-btn"
+                                    onclick="adicionarCarrinho('Cerveja Artesanal (long neck)', 13)">
+                                    <span>+</span> Adicionar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardapio-item">
+
+                        <div class="card-conteudo">
+                            <h3>Coca-Cola Retornável 2L</h3>
+                            <!--<div class="ingredientes">Lata 350ml</div>-->
+                            <div class="card-rodape">
+                                <div class="preco">R$ 5,50</div>
+                                <button class="adicionar-btn"
+                                    onclick="adicionarCarrinho('Cerveja Artesanal (long neck)', 13)">
+                                    <span>+</span> Adicionar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardapio-item">
+
+                        <div class="card-conteudo">
+                            <h3>Heineken 330ml</h3>
+                            <!--<div class="ingredientes">Lata 350ml</div>-->
+                            <div class="card-rodape">
+                                <div class="preco">R$ 10,90</div>
+                                <button class="adicionar-btn"
+                                    onclick="adicionarCarrinho('Cerveja Artesanal (long neck)', 13)">
+                                    <span>+</span> Adicionar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardapio-item">
+
+                        <div class="card-conteudo">
+                            <h3>Amstel 350ml</h3>
+                            <!--<div class="ingredientes">Lata 350ml</div>-->
+                            <div class="card-rodape">
+                                <div class="preco">R$ 9,00</div>
+                                <button class="adicionar-btn"
+                                    onclick="adicionarCarrinho('Cerveja Artesanal (long neck)', 13)">
+                                    <span>+</span> Adicionar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardapio-item">
+
+                        <div class="card-conteudo">
+                            <h3>H2OH</h3>
+                            <!--<div class="ingredientes">Lata 350ml</div>-->
+                            <div class="card-rodape">
+                                <div class="preco">R$ 6,00</div>
+                                <button class="adicionar-btn"
+                                    onclick="adicionarCarrinho('Cerveja Artesanal (long neck)', 13)">
+                                    <span>+</span> Adicionar
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
-
-            </div>
-
-        </section>
-
-
-
-        <section class="carrinho-container">
-            <h2>🛒 Seu Pedido Imperial</h2>
-            <ul id="lista-carrinho"></ul>
-            <div id="total">Total: R$ 0,00</div>
-
-            <div id="tempo-espera">
-                ⏱️ <strong>Tempo médio de preparo:</strong> 30-40 minutos
             </div>
         </section>
 
-        <section class="info-cliente">
-            <h2>📋 Informações do Cliente</h2>
-
-            <div class="form-group">
-                <label for="nome">Nome Completo</label>
-                <input type="text" id="nome" placeholder="Como devemos chamá-lo?" required>
-            </div>
-
-            <div class="form-group">
-                <label for="cep">CEP para Entrega</label>
-                <p>Digite seu CEP, pressione "Buscar" e o endereço será preenchido automaticamente.</p>
-                <div style="display: flex; gap: 5px; margin-bottom: 5px;">
-                    <input type="text" id="cep" placeholder="Ex: 01001000" required style="flex: 1;">
-                    <button type="button" onclick="buscarCEP()" title="Buscar endereço pelo CEP">
-                        <i class="fas fa-search-location"></i> <!-- Ícone do Font Awesome -->
-                    </button>
+        <section id="acompanhamentos">
+            <h2>🍟ACOMPANHAMENTOS</h2>
+            <div class="cardapio-container">
+                <div class="cardapio-item">
+                    <div class="card-imagem">
+                        <img src="https://swiftbr.vteximg.com.br/arquivos/ids/201377-450-450/622291-batata-airfryer-extra-croc-mccain_3.jpg?v=638657204471230000"
+                            alt="Brownie quente com sorvete">
+                    </div>
+                    <div class="card-conteudo">
+                        <h3>BATATA FRITA 200G</h3>
+                        <!--<div class="ingredientes">Lata 350ml</div>-->
+                        <div class="card-rodape">
+                            <div class="preco">R$ 10,00</div>
+                            <button class="adicionar-btn" onclick="adicionarCarrinho('Brownie quente com sorvete', 18)">
+                                <span>+</span> Adicionar
+                            </button>
+                        </div>
+                    </div>
                 </div>
-
-                <input type="text" id="endereco" placeholder="Endereço será preenchido aqui" readonly
-                    style="width: 100%; margin-bottom: 5px;">
-                <input type="text" id="bairro" placeholder="Bairro" readonly style="width: 100%; margin-bottom: 5px;">
-                <input type="text" id="localidade" placeholder="Cidade" readonly
-                    style="width: 100%; margin-bottom: 5px;">
-                <input type="text" id="uf" placeholder="UF" readonly style="width: 100%;">
+                <div class="cardapio-item">
+                    <div class="card-imagem">
+                        <img src="https://swiftbr.vteximg.com.br/arquivos/ids/201377-450-450/622291-batata-airfryer-extra-croc-mccain_3.jpg?v=638657204471230000 "
+                            alt="Mini churros recheados">
+                    </div>
+                    <div class="card-conteudo">
+                        <h3>BATATA FRITA 350G</h3>
+                        <!--<div class="ingredientes">Lata 350ml</div>-->
+                        <div class="card-rodape">
+                            <div class="preco">R$ 18,00</div>
+                            <button class="adicionar-btn" onclick="adicionarCarrinho('Mini churros recheados', 16)">
+                                <span>+</span> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardapio-item">
+                    <div class="card-imagem">
+                        <img src="https://swiftbr.vteximg.com.br/arquivos/ids/201377-450-450/622291-batata-airfryer-extra-croc-mccain_3.jpg?v=638657204471230000"
+                            alt="Mini churros recheados">
+                    </div>
+                    <div class="card-conteudo">
+                        <h3>BATATA CHEDDAR E BACON</h3>
+                        <P>PORÇÃO COM 15 UNDS.</P>
+                        <!--<div class="ingredientes">Lata 350ml</div>-->
+                        <div class="card-rodape">
+                            <div class="preco">R$ 22,99</div>
+                            <button class="adicionar-btn" onclick="adicionarCarrinho('Mini churros recheados', 16)">
+                                <span>+</span> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardapio-item">
+                    <div class="card-imagem">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOJWwhHnnuM7idU7ksyzXq7KmcvL6Ndq2NQg&s"
+                            alt="Mini churros recheados">
+                    </div>
+                    <div class="card-conteudo">
+                        <h3>BOLINHAS DE QUEIJO</h3>
+                        <P>PORÇÃO COM 15 UNDS.</P>
+                        <!--<div class="ingredientes">Lata 350ml</div>-->
+                        <div class="card-rodape">
+                            <div class="preco">R$ 22,00</div>
+                            <button class="adicionar-btn" onclick="adicionarCarrinho('Mini churros recheados', 16)">
+                                <span>+</span> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-
-            <div class="form-group">
-                <label for="telefone">Numero da Casa</label>
-                <input type="tel" id="telefone" placeholder="000" required>
-            </div>
-            <div class="form-group">
-                <label for="quadra">Quadra</label>
-                <input type="tel" id="quadra" placeholder="000" required>
-            </div>
-
-            <script>
-                function buscarCEP() {
-                    const cep = document.getElementById('cep').value.replace(/\D/g, '');
-                    if (cep.length !== 8) {
-                        alert('CEP inválido! Digite os 8 números.');
-                        return;
-                    }
-                    fetch(`https://viacep.com.br/ws/${cep}/json/`)
-                        .then(response => response.json())
-                        .then(data => {
-                            if (data.erro) {
-                                alert('CEP não encontrado!');
-                            } else {
-                                document.getElementById('endereco').value = data.logradouro || '';
-                                document.getElementById('bairro').value = data.bairro || '';
-                                document.getElementById('localidade').value = data.localidade || '';
-                                document.getElementById('uf').value = data.uf || '';
-                            }
-                        })
-                        .catch(() => {
-                            alert('Erro ao buscar o CEP!');
-                        });
-                }
-            </script>
-
-
-            <!-- Opcional: Link para o Font Awesome se não estiver incluído -->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-            <div class="form-group">
-                <label for="observacoes">Observações</label>
-                <textarea id="observacoes" placeholder="Alergias, modificações ou pedidos especiais"></textarea>
-            </div>
-
-            <button class="enviar-btn" onclick="enviarPedido()">
-                📤 Enviar Pedido via WhatsApp
-            </button>
-        </section>
-
-        <div id="loading" class="hidden">
-            <div class="spinner"></div>
-            <p>Preparando seu pedido imperial...</p>
-        </div>
+    </div>
+    </section>
     </div>
 
-    <!-- FOOTER HTML -->
+
+
+    <section class="carrinho-container">
+        <h2>🛒 Seu Pedido Imperial</h2>
+        <ul id="lista-carrinho"></ul>
+        <div id="total">Total: R$ 0,00</div>
+
+        <div id="tempo-espera">
+            ⏱️ <strong>Tempo médio de preparo:</strong> 30-40 minutos
+        </div>
+    </section>
+
+    <section class="info-cliente">
+        <h2>📋 Informações do Cliente</h2>
+
+        <div class="form-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" placeholder="Como devemos chamá-lo?" required>
+        </div>
+
+        <div class="form-group">
+            <label for="bairro">Bairro</label>
+            <input type="text" id="bairro" placeholder="Ex: Jardim do Ingá" required>
+        </div>
+
+        <div class="form-group">
+            <label for=" endereco_rua">Rua</label>
+            <input type="text" id=" endereco_rua" placeholder="Digite seu endereço aqui." required style="flex: 1;">
+        </div>
+
+        <div class="form-group">
+            <label for="quadra">Quadra</label>
+            <input type="text" id="quadra" placeholder="Digite sua Quadra." required style="flex: 1;">
+        </div>
+
+        <div class="form-group">
+            <label for="casa">Casa</label>
+            <input type="text" id="casa" placeholder="Digite o numero de sua casa." required style="flex: 1;">
+        </div>
+
+
+
+
+
+
+        <!-- Opcional: Link para o Font Awesome se não estiver incluído -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+        <div class="form-group">
+            <label for="observacoes">Observações</label>
+            <textarea id="observacoes" placeholder="Alergias, modificações ou pedidos especiais"></textarea>
+        </div>
+
+        <button class="enviar-btn" onclick="enviarPedido()">
+            📤 Enviar Pedido via WhatsApp
+        </button>
+    </section>
+
+    <div id="loading" class="hidden">
+        <div class="spinner"></div>
+        <p>Preparando seu pedido imperial...</p>
+    </div>
+    </div>
+
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
@@ -868,10 +839,9 @@
             © 2025 Cardápio Digital | Todos os direitos reservados.
         </div>
     </footer>
-
     <script>
         const carrinho = [];
-        const numeroWhatsApp = '5561993663135'; // Número do restaurante
+        const numeroWhatsApp = '5561981227195'; // Número do restaurante
 
         function adicionarCarrinho(item, preco) {
             carrinho.push({ item, preco });
@@ -942,115 +912,77 @@
             }, 3000);
         }
 
-        function validarTelefone(telefone) {
-            const numeroLimpo = telefone.replace(/\D/g, '');
-            return numeroLimpo.length >= 10 && numeroLimpo.length <= 13;
-        }
 
-        function formatarTelefone(telefone) {
-            const numeroLimpo = telefone.replace(/\D/g, '');
-            if (numeroLimpo.length === 11) {
-                return numeroLimpo.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
-            }
-            return telefone;
-        }
 
         function enviarPedido() {
-    const nome = document.getElementById('nome').value.trim();
-    const telefone = document.getElementById('telefone').value.trim();
-    const cep = document.getElementById('cep').value.trim();
-    const endereco = document.getElementById('endereco').value.trim();
-    const bairro = document.getElementById('bairro').value.trim();
-    const cidade = document.getElementById('localidade').value.trim();
-    const uf = document.getElementById('uf').value.trim();
-    const numeroCasa = document.getElementById('telefone').value.trim();
-    const quadra = document.getElementById('quadra').value.trim();
-    // Adicionando o número da casa e quadra na mensagem
-    const observacoes = document.getElementById('observacoes').value.trim();
+            const nome = document.getElementById('nome').value.trim();
+            const bairro = document.getElementById('bairro').value.trim();
+            const endereco_rua = document.getElementById(' endereco_rua').value.trim();
+            const quadra = document.getElementById('quadra').value.trim();
+            const casa = document.getElementById('casa').value.trim();
+            const observacoes = document.getElementById('observacoes').value.trim();
 
-    // Validações
-    if (!nome) {
-        mostrarNotificacao('Por favor, informe seu nome completo.', 'erro');
-        document.getElementById('nome').focus();
-        return;
-    }
+            // Validações
+            if (!nome) {
+                mostrarNotificacao('Por favor, informe seu nome completo.', 'erro');
+                document.getElementById('nome').focus();
+                return;
+            }
 
-    
+            if (!bairro) {
+                mostrarNotificacao('Por favor, informe seu bairro.', 'erro');
+                document.getElementById('bairro').focus();
+                return;
+            }
 
-    if (!cep || cep.length !== 8) {
-        mostrarNotificacao('Por favor, informe um CEP válido (8 números).', 'erro');
-        document.getElementById('cep').focus();
-        return;
-    }
+            if (!endereco_rua) {
+                mostrarNotificacao('Por favor, informe sua RUA para entrega.', 'erro');
+                document.getElementById(' endereco_rua').focus();
+                return;
+            }
 
-    if (!endereco) {
-        mostrarNotificacao('Endereço não preenchido. Busque pelo CEP ou digite manualmente.', 'erro');
-        document.getElementById('endereco').focus();
-        return;
-    }
-
-    if (!bairro) {
-        mostrarNotificacao('Por favor, informe o bairro.', 'erro');
-        document.getElementById('bairro').focus();
-        return;
-    }
-
-    if (!cidade) {
-        mostrarNotificacao('Por favor, informe a cidade.', 'erro');
-        document.getElementById('localidade').focus();
-        return;
-    }
-
-    if (!uf) {
-        mostrarNotificacao('Por favor, informe o estado (UF).', 'erro');
-        document.getElementById('uf').focus();
-        return;
-    }
-    if (!numeroCasa) {
-        mostrarNotificacao('Por favor, informe o número da casa.', 'erro');
-        document.getElementById('telefone').focus();
-        return;
-    }
-    if (!quadra) {
-        mostrarNotificacao('Por favor, informe a quadra.', 'erro');
-        document.getElementById('quadra').focus();
-        return;
-    }
-
-    if (carrinho.length === 0) {
-        mostrarNotificacao('Seu carrinho está vazio. Adicione itens!', 'erro');
-        return;
-    }
+            if (!quadra) {
+                mostrarNotificacao('Por favor, informe sua QUADRA.', 'erro');
+                document.getElementById('quadra').focus();
+                return;
+            }
+            if (!casa) {
+                mostrarNotificacao('Por favor, informe o número da sua CASA.', 'erro');
+                document.getElementById('casa').focus();
+                return;
+            }
+            if (carrinho.length === 0) {
+                mostrarNotificacao('Seu carrinho está vazio. Adicione itens!', 'erro');
+                return;
+            }
 
             // Mostrar loading
             document.getElementById('loading').style.display = 'block';
             document.querySelector('.enviar-btn').disabled = true;
 
-         // Formatar mensagem
-let mensagem = `*🍔 PEDIDO - HAMBURGUERIA SABOR E BRASA 🍔*\n\n` +
-    `👤 *Cliente:* ${nome}\n` +
-    `📱 *WhatsApp:* ${formatarTelefone(telefone)}\n` +
-    `📍 *Endereço para entrega:*\n` +
-    `${endereco}, ${bairro} - ${cidade}/${uf}\n` +
-    `🔑 *CEP:* ${cep}\n\n` +
-    `🏠 *Número da Casa:* ${numeroCasa}\n` +
-    `🏡 *Quadra:* ${quadra}\n\n` +
-    `🍽️ *Itens do Pedido:*\n`;
+            // Formatar mensagem
+            let mensagem = `*🍔 PEDIDO - CASA DO HAMBURGUER🍔*\n\n` +
+                `👤 *Cliente:* ${nome}\n\n ` +
+                `📍 *Bairro:* ${bairro}\n\n` +
+                `📍 *Rua:* ${endereco_rua}\n\n` +
+                `🏠 *Quadra:* ${quadra}\n\n` +
+                `🏠 *Casa:* ${casa}\n\n` +
+                `🍽️ *Itens do Pedido:*\n`;
 
-carrinho.forEach(({ item, preco }) => {
-    mensagem += `✔️ ${item} - R$ ${preco.toFixed(2).replace('.', ',')}\n`;
-});
+            carrinho.forEach(({ item, preco }) => {
+                mensagem += `✔️ ${item} - R$ ${preco.toFixed(2).replace('.', ',')}\n`;
+            });
 
-const total = carrinho.reduce((s, i) => s + i.preco, 0);
-mensagem += `\n💰 *Total:* R$ ${total.toFixed(2).replace('.', ',')}\n\n` +
-    `⏱️ *Tempo estimado:* 30-40 minutos\n`;
+            const total = carrinho.reduce((s, i) => s + i.preco, 0);
+            mensagem += `\n💰 *Total:* R$ ${total.toFixed(2).replace('.', ',')}\n\n` +
+                `⏱️ *Tempo estimado:* 30-40 minutos\n`;
 
-if (observacoes) {
-    mensagem += `📝 *Observações:*\n${observacoes}\n\n`;
-}
+            if (observacoes) {
+                mensagem += `📝 *Observações:*\n${observacoes}\n\n`;
+            }
 
-mensagem += `🙏 *Agradecemos pela preferência!*\n` +
-    `🔔 Seu pedido será preparado em breve.`;
+            mensagem += `🙏 *Agradecemos pela preferência!*\n` +
+                `🔔 Seu pedido será preparado em breve.`;
 
             // Codificar a mensagem para URL
             const mensagemCodificada = encodeURIComponent(mensagem);
@@ -1066,36 +998,16 @@ mensagem += `🙏 *Agradecemos pela preferência!*\n` +
                 carrinho.length = 0;
                 atualizarCarrinho();
                 document.getElementById('nome').value = '';
-                document.getElementById('telefone').value = '';
-                document.getElementById('endereco').value = '';
-                document.getElementById('observacoes').value = '';
-                document.getElementById('cep').value = '';
                 document.getElementById('bairro').value = '';
-                document.getElementById('localidade').value = '';
-                document.getElementById('uf').value = '';
-                document.getElementById('telefone').value = '';
+                document.getElementById('endereco_rua').value = '';
                 document.getElementById('quadra').value = '';
-
+                document.getElementById('casa').value = '';
+                document.getElementById('observacoes').value = '';
 
                 // Notificação de sucesso
                 mostrarNotificacao('✅ Pedido enviado com sucesso!');
             }, 1500);
         }
-
-        // Máscara para telefone
-        document.getElementById('telefone').addEventListener('input', function (e) {
-            let value = e.target.value.replace(/\D/g, '');
-            if (value.length > 11) value = value.substring(0, 11);
-
-            if (value.length > 0) {
-                value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
-                if (value.length > 10) {
-                    value = value.replace(/(\d)(\d{4})$/, '$1-$2');
-                }
-            }
-
-            e.target.value = value;
-        });
 
         // Inicializar carrinho vazio
         atualizarCarrinho();
