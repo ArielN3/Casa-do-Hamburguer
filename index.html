@@ -17,18 +17,20 @@
     <header class="header">
         <div class="logo">
             <img src="logo-casa.png" alt="Logo do Restaurante" class="logo-img" />
-            <span class="logo-text">Cardápio Digital</span>
+            <span class="logo-text">Casa do Hambúrguer</span>
         </div>
 
         <input type="checkbox" id="menu-toggle" />
         <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
-
+        
         <nav class="nav">
             <a href="#Hamburgueres">Hambúrgueres</a>
             <a href="#adicionais">Adicionais</a>
             <a href="#bebidas">Bebidas</a>
             <a href="#acompanhamentos">Acompanhamentos</a>
+            <a href="#carrinho">Carrinho</a>
         </nav>
+
     </header>
    
     <div class="container">
@@ -755,7 +757,7 @@
 
 
 
-    <section class="carrinho-container">
+    <section class="carrinho-container" id="carrinho">
         <h2>🛒 Seu Pedido Imperial</h2>
         <ul id="lista-carrinho"></ul>
         <div id="total">Total: R$ 0,00</div>
@@ -840,6 +842,7 @@
         </div>
     </footer>
     <script>
+        const taxaEntrega = 8.50; // R$ 8,50
         const carrinho = [];
         const numeroWhatsApp = '5561981227195'; // Número do restaurante
 
@@ -870,6 +873,7 @@
             const total = document.getElementById('total');
             lista.innerHTML = '';
 
+            // Verifica se o carrinho está vazio
             if (carrinho.length === 0) {
                 lista.innerHTML = '<li class="empty-cart">Seu carrinho está vazio</li>';
                 total.textContent = 'Total: R$ 0,00';
@@ -887,7 +891,16 @@
                 lista.appendChild(li);
                 soma += preco;
             });
+            // Adiciona taxa de entrega se houver itens no carrinho
+            if (carrinho.length > 0) {
+                const liTaxa = document.createElement('li');
+                liTaxa.className = 'carrinho-item taxa-entrega';
+                liTaxa.innerHTML = `<span>🚚 Taxa de entrega - R$ ${taxaEntrega.toFixed(2).replace('.', ',')}</span>`;
+                lista.appendChild(liTaxa);
+                soma += taxaEntrega;
+            }
 
+            // Adiciona a taxa de entrega ao total
             total.textContent = `Total: R$ ${soma.toFixed(2).replace('.', ',')}`;
         }
 
@@ -920,6 +933,7 @@
             const endereco_rua = document.getElementById(' endereco_rua').value.trim();
             const quadra = document.getElementById('quadra').value.trim();
             const casa = document.getElementById('casa').value.trim();
+            
             const observacoes = document.getElementById('observacoes').value.trim();
 
             // Validações
@@ -973,10 +987,14 @@
                 mensagem += `✔️ ${item} - R$ ${preco.toFixed(2).replace('.', ',')}\n`;
             });
 
-            const total = carrinho.reduce((s, i) => s + i.preco, 0);
-            mensagem += `\n💰 *Total:* R$ ${total.toFixed(2).replace('.', ',')}\n\n` +
-                `⏱️ *Tempo estimado:* 30-40 minutos\n`;
 
+
+            // Calcula o total do pedido e adiciona à mensagem
+            const total = carrinho.reduce((s, i) => s + i.preco, 0) + taxaEntrega;
+            mensagem += `\n🚚 *Taxa de entrega:* R$ ${taxaEntrega.toFixed(2).replace('.', ',')}\n`;
+            mensagem += `💰 *Total:* R$ ${total.toFixed(2).replace('.', ',')}\n\n` +
+                `⏱️ *Tempo estimado:* 30-40 minutos\n\n`;
+             
             if (observacoes) {
                 mensagem += `📝 *Observações:*\n${observacoes}\n\n`;
             }
