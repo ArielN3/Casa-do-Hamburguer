@@ -22,7 +22,7 @@
 
         <input type="checkbox" id="menu-toggle" />
         <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
-        
+
         <nav class="nav">
             <a href="#Hamburgueres">Hambúrgueres</a>
             <a href="#adicionais">Adicionais</a>
@@ -32,7 +32,7 @@
         </nav>
 
     </header>
-   
+
     <div class="container">
         <!--
         <header class="restaurant-header">
@@ -386,8 +386,7 @@
                             <div class="ingredientes">Batatas rústicas temperadas com páprica e ervas.</div>
                             <div class="card-rodape">
                                 <div class="preco">R$ 9,00</div>
-                                <button class="adicionar-btn"
-                                    onclick="adicionarCarrinho( 'Hambúrguer 140g', 9)">
+                                <button class="adicionar-btn" onclick="adicionarCarrinho( 'Hambúrguer 140g', 9)">
                                     <span>+</span> Adicionar
                                 </button>
                             </div>
@@ -435,7 +434,8 @@
                             <div class="ingredientes">Escolha: Defumado ou Picante.</div>
                             <div class="card-rodape">
                                 <div class="preco">R$ 2,50</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( 'Picles (pepino / cebola)', 2.50)">
+                                <button class="adicionar-btn"
+                                    onclick="adicionarCarrinho( 'Picles (pepino / cebola)', 2.50)">
                                     <span>+</span> Adicionar
                                 </button>
                             </div>
@@ -558,8 +558,7 @@
                             <!--<div class="ingredientes">Lata 350ml</div>-->
                             <div class="card-rodape">
                                 <div class="preco">R$ 3,50</div>
-                                <button class="adicionar-btn"
-                                    onclick="adicionarCarrinho( 'Água Mineral', 3.50)">
+                                <button class="adicionar-btn" onclick="adicionarCarrinho( 'Água Mineral', 3.50)">
                                     <span>+</span> Adicionar
                                 </button>
                             </div>
@@ -586,8 +585,7 @@
                             <!--<div class="ingredientes">Lata 350ml</div>-->
                             <div class="card-rodape">
                                 <div class="preco">R$ 12,00</div>
-                                <button class="adicionar-btn"
-                                    onclick="adicionarCarrinho( 'Coca-Cola 2L', 12)">
+                                <button class="adicionar-btn" onclick="adicionarCarrinho( 'Coca-Cola 2L', 12)">
                                     <span>+</span> Adicionar
                                 </button>
                             </div>
@@ -642,8 +640,7 @@
                             <!--<div class="ingredientes">Lata 350ml</div>-->
                             <div class="card-rodape">
                                 <div class="preco">R$ 10,90</div>
-                                <button class="adicionar-btn"
-                                    onclick="adicionarCarrinho( 'Heineken 330ml', 10.90)">
+                                <button class="adicionar-btn" onclick="adicionarCarrinho( 'Heineken 330ml', 10.90)">
                                     <span>+</span> Adicionar
                                 </button>
                             </div>
@@ -656,8 +653,7 @@
                             <!--<div class="ingredientes">Lata 350ml</div>-->
                             <div class="card-rodape">
                                 <div class="preco">R$ 9,00</div>
-                                <button class="adicionar-btn"
-                                    onclick="adicionarCarrinho( 'Amstel 350ml', 9)">
+                                <button class="adicionar-btn" onclick="adicionarCarrinho( 'Amstel 350ml', 9)">
                                     <span>+</span> Adicionar
                                 </button>
                             </div>
@@ -670,8 +666,7 @@
                             <!--<div class="ingredientes">Lata 350ml</div>-->
                             <div class="card-rodape">
                                 <div class="preco">R$ 6,00</div>
-                                <button class="adicionar-btn"
-                                    onclick="adicionarCarrinho( 'H2OH', 6)">
+                                <button class="adicionar-btn" onclick="adicionarCarrinho( 'H2OH', 6)">
                                     <span>+</span> Adicionar
                                 </button>
                             </div>
@@ -756,16 +751,24 @@
     </div>
 
 
-
     <section class="carrinho-container" id="carrinho">
         <h2>🛒 Seu Pedido Imperial</h2>
         <ul id="lista-carrinho"></ul>
-        <div id="total">Total: R$ 0,00</div>
+
+
+        <div id="total">Total: R$ 25,00</div>
+        <div id="infoEntrega" class="info-entrega">🚚 Entrega selecionada (R$ 8,50)</div>
+        <label for="tipoEntrega"><strong>Escolha a forma de receber:</strong></label>
+        <select id="tipoEntrega">
+            <option value="entrega">Entrega</option>
+            <option value="retirada">Retirar no local</option>
+        </select>
 
         <div id="tempo-espera">
             ⏱️ <strong>Tempo médio de preparo:</strong> 30-40 minutos
         </div>
     </section>
+
 
     <section class="info-cliente">
         <h2>📋 Informações do Cliente</h2>
@@ -846,12 +849,29 @@
         const carrinho = [];
         const numeroWhatsApp = '5561981227195'; // Número do restaurante
 
+        let entregaAtiva = true; // por padrão começa como "entrega"
+
+       document.getElementById('tipoEntrega').addEventListener('change', function() {
+    entregaAtiva = (this.value === 'entrega');
+    atualizarCarrinho();
+
+    const info = document.getElementById('infoEntrega');
+    if (entregaAtiva) {
+        info.textContent = `🚚 Entrega selecionada (R$ ${taxaEntrega.toFixed(2).replace('.', ',')})`;
+        info.classList.remove('retirada');
+        info.classList.add('entrega');
+    } else {
+        info.textContent = "🏠 Retirada no local (sem taxa)";
+        info.classList.remove('entrega');
+        info.classList.add('retirada');
+    }
+}); 
+
         function adicionarCarrinho(item, preco) {
             carrinho.push({ item, preco });
             atualizarCarrinho();
             mostrarNotificacao(`✔️ ${item} adicionado ao carrinho!`);
 
-            // Efeito visual no item do cardápio
             const buttons = document.querySelectorAll('.adicionar-btn');
             buttons.forEach(btn => {
                 if (btn.textContent.includes(item)) {
@@ -873,7 +893,6 @@
             const total = document.getElementById('total');
             lista.innerHTML = '';
 
-            // Verifica se o carrinho está vazio
             if (carrinho.length === 0) {
                 lista.innerHTML = '<li class="empty-cart">Seu carrinho está vazio</li>';
                 total.textContent = 'Total: R$ 0,00';
@@ -885,14 +904,15 @@
                 const li = document.createElement('li');
                 li.className = 'carrinho-item';
                 li.innerHTML = `
-                    <span>${item} - R$ ${preco.toFixed(2).replace('.', ',')}</span>
-                    <button class="remover-btn" onclick="removerCarrinho(${i})">Remover</button>
-                `;
+            <span>${item} - R$ ${preco.toFixed(2).replace('.', ',')}</span>
+            <button class="remover-btn" onclick="removerCarrinho(${i})">Remover</button>
+        `;
                 lista.appendChild(li);
                 soma += preco;
             });
-            // Adiciona taxa de entrega se houver itens no carrinho
-            if (carrinho.length > 0) {
+
+            // Adiciona taxa de entrega somente se entregaAtiva for true
+            if (carrinho.length > 0 && entregaAtiva) {
                 const liTaxa = document.createElement('li');
                 liTaxa.className = 'carrinho-item taxa-entrega';
                 liTaxa.innerHTML = `<span>🚚 Taxa de entrega - R$ ${taxaEntrega.toFixed(2).replace('.', ',')}</span>`;
@@ -900,7 +920,6 @@
                 soma += taxaEntrega;
             }
 
-            // Adiciona a taxa de entrega ao total
             total.textContent = `Total: R$ ${soma.toFixed(2).replace('.', ',')}`;
         }
 
@@ -908,8 +927,8 @@
             const notificacao = document.createElement('div');
             notificacao.className = `notificacao ${tipo === 'erro' ? 'erro' : ''}`;
             notificacao.innerHTML = `
-                ${tipo === 'erro' ? '❌' : '✔️'} ${mensagem}
-            `;
+        ${tipo === 'erro' ? '❌' : '✔️'} ${mensagem}
+    `;
 
             document.body.appendChild(notificacao);
 
@@ -925,36 +944,29 @@
             }, 3000);
         }
 
-
-
         function enviarPedido() {
             const nome = document.getElementById('nome').value.trim();
             const bairro = document.getElementById('bairro').value.trim();
             const endereco_rua = document.getElementById(' endereco_rua').value.trim();
             const quadra = document.getElementById('quadra').value.trim();
             const casa = document.getElementById('casa').value.trim();
-            
             const observacoes = document.getElementById('observacoes').value.trim();
 
-            // Validações
             if (!nome) {
                 mostrarNotificacao('Por favor, informe seu nome completo.', 'erro');
                 document.getElementById('nome').focus();
                 return;
             }
-
             if (!bairro) {
                 mostrarNotificacao('Por favor, informe seu bairro.', 'erro');
                 document.getElementById('bairro').focus();
                 return;
             }
-
             if (!endereco_rua) {
                 mostrarNotificacao('Por favor, informe sua RUA para entrega.', 'erro');
                 document.getElementById(' endereco_rua').focus();
                 return;
             }
-
             if (!quadra) {
                 mostrarNotificacao('Por favor, informe sua QUADRA.', 'erro');
                 document.getElementById('quadra').focus();
@@ -970,11 +982,9 @@
                 return;
             }
 
-            // Mostrar loading
             document.getElementById('loading').style.display = 'block';
             document.querySelector('.enviar-btn').disabled = true;
 
-            // Formatar mensagem
             let mensagem = `*🍔 PEDIDO - CASA DO HAMBURGUER🍔*\n\n` +
                 `👤 *Cliente:* ${nome}\n\n ` +
                 `📍 *Bairro:* ${bairro}\n\n` +
@@ -987,14 +997,15 @@
                 mensagem += `✔️ ${item} - R$ ${preco.toFixed(2).replace('.', ',')}\n`;
             });
 
+            // Calcular total com ou sem taxa
+            const total = carrinho.reduce((s, i) => s + i.preco, 0) + (entregaAtiva ? taxaEntrega : 0);
 
-
-            // Calcula o total do pedido e adiciona à mensagem
-            const total = carrinho.reduce((s, i) => s + i.preco, 0) + taxaEntrega;
-            mensagem += `\n🚚 *Taxa de entrega:* R$ ${taxaEntrega.toFixed(2).replace('.', ',')}\n`;
+            if (entregaAtiva) {
+                mensagem += `\n🚚 *Taxa de entrega:* R$ ${taxaEntrega.toFixed(2).replace('.', ',')}\n`;
+            }
             mensagem += `💰 *Total:* R$ ${total.toFixed(2).replace('.', ',')}\n\n` +
                 `⏱️ *Tempo estimado:* 30-40 minutos\n\n`;
-             
+
             if (observacoes) {
                 mensagem += `📝 *Observações:*\n${observacoes}\n\n`;
             }
@@ -1002,17 +1013,14 @@
             mensagem += `🙏 *Agradecemos pela preferência!*\n` +
                 `🔔 Seu pedido será preparado em breve.`;
 
-            // Codificar a mensagem para URL
             const mensagemCodificada = encodeURIComponent(mensagem);
             const url = `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`;
 
-            // Abrir WhatsApp após pequeno delay para mostrar o loading
             setTimeout(() => {
                 window.open(url, '_blank');
                 document.getElementById('loading').style.display = 'none';
                 document.querySelector('.enviar-btn').disabled = false;
 
-                // Limpar carrinho após envio
                 carrinho.length = 0;
                 atualizarCarrinho();
                 document.getElementById('nome').value = '';
@@ -1022,13 +1030,13 @@
                 document.getElementById('casa').value = '';
                 document.getElementById('observacoes').value = '';
 
-                // Notificação de sucesso
                 mostrarNotificacao('✅ Pedido enviado com sucesso!');
             }, 1500);
         }
 
         // Inicializar carrinho vazio
         atualizarCarrinho();
+
     </script>
 </body>
 
