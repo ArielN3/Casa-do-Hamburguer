@@ -23,7 +23,7 @@
         <input type="checkbox" id="menu-toggle" />
         <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
 
-        <nav class="nav">
+        <nav id="nav">
             <a href="#Hamburgueres">Hambúrgueres</a>
             <a href="#adicionais">Adicionais</a>
             <a href="#bebidas">Bebidas</a>
@@ -33,726 +33,558 @@
 
     </header>
 
-    <div class="container">
-        <!--
-        <header class="restaurant-header">
-            <div class="logo-container">
-                <img src="logo-casa.png" alt="Restaurante Lóng zhī wèi" class="header-logo">
+   <div class="category-dropdown">
+  <button class="dropdown-toggle">
+    <span>Menu</span>
+    <svg class="dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none">
+      <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </button>
+  <div class="dropdown-menu">
+    <a href="#Hamburgueres" class="menu-item">
+      <span>🍔 Hambúrgueres</span>
+    </a>
+    <a href="#adicionais" class="menu-item">
+      <span>🧀 Adicionais</span>
+    </a>
+    <a href="#bebidas" class="menu-item">
+      <span>🥤 Bebidas</span>
+    </a>
+    <a href="#acompanhamentos" class="menu-item">
+      <span>🍟 Acompanhamentos</span>
+    </a>
+  </div>
+</div>
+    <section class="carrinho-container" id="carrinho">
+
+
+        <div id="tempo-espera">
+            ⏱️ <strong>Tempo médio de preparo:</strong> 30-40 minutos
+        </div>
+    </section>
+
+    <section id="Hamburgueres">
+      
+
+        <h2 align="center">👨‍🍳 Melhores da Casa</h2>
+        
+        <div class="cardapio-item">
+            <div class="card-imagem">
+                <img src="https://viagem.cnnbrasil.com.br/wp-content/uploads/sites/5/2022/05/mafe-estudio-LV2p9Utbkbw-unsplash.jpg"
+                    alt="CLASSIC">
             </div>
-            <h3>Sabor que vem da Brasa, paixão em cada mordida</h3>
-
-        </header>-->
-
-
-
-        <section id="Hamburgueres">
-            <h2>👨‍🍳 Melhores da Casa</h2>
-
-            <div class="cardapio-grid">
-
-
-                <div class="cardapio-container">
-                    <div class="cardapio-item">
-                        <div class="card-imagem">
-                            <img src="https://viagem.cnnbrasil.com.br/wp-content/uploads/sites/5/2022/05/mafe-estudio-LV2p9Utbkbw-unsplash.jpg"
-                                alt="X-Bacon Supremo">
-                        </div>
-                        <div class="card-conteudo">
-                            <h3>🍔 CLASSIC</h3>
-                            <div class="ingredientes">Pão brioche, burguer 140g, cheddar, alface, tomate e maionese da
-                                casa.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 16,00</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho('CLASSIC', 16)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="cardapio-item">
-                        <div class="card-imagem">
-                            <img src="https://moinhoglobo.com.br/wp-content/uploads/2019/05/16-hamburguer.jpeg"
-                                alt="Monstro da Brasa">
-                        </div>
-                        <div class="card-conteudo">
-                            <h3>🍔 STARMAN</h3>
-                            <div class="ingredientes">Pão brioche, burguer 140g, mussarela, bacon, cebola caramelizada,
-                                alface, tomate e maionese da casa.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 21,00</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho('STARMAN', 21)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+            <div class="-conteudo">
+                <h3>CLASSIC</h3>
+                <div class="ingredientes">Pão brioche, burguer 140g, cheddar...<div class="preco">R$ 16,00</div>
                 </div>
+            </div>
+        </div>
 
-                <div class="cardapio-container">
-                    <div class="cardapio-item">
-                        <div class="card-imagem">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCoUhMnPmRh4ILmy00z6avGA5amn6L_eCCRg&s"
-                                alt="X-Fogo">
-                        </div>
-                        <div class="card-conteudo">
-                            <h3>🔥SMASH</h3>
-                            <div class="ingredientes">Pão brioche, burguer 90g, mussarela e maionese da casa.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 14,50</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho('SMASH', 14.50)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="cardapio-item">
-                        <div class="card-imagem">
-                            <img src="https://s2-casavogue.glbimg.com/GRF9KCq-1hiz5uSs-xX9Go_KqIc=/0x0:2048x1365/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_d72fd4bf0af74c0c89d27a5a226dbbf8/internal_photos/bs/2022/p/X/eb4KQdToys327cGqnRGg/receita-ceboloni-bacon.jpg"
-                                alt="X-Cheddar Cremoso">
-                        </div>
-                        <div class="card-conteudo">
-                            <h3>🧀SELENITA</h3>
-                            <div class="ingredientes">Pão brioche, burguer 140g, cheddar, bacon, cebola caramelizada,
-                                alface, tomate e maionese da casa.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 21,00</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho('🧀SELENITA', 21)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+        <div class="cardapio-item">
+            <div class="card-imagem">
+                <img src="https://moinhoglobo.com.br/wp-content/uploads/2019/05/16-hamburguer.jpeg"
+                    alt="Monstro da Brasa">
+            </div>
+            <div class="-conteudo">
+                <h3>STARMAN</h3>
+                <div class="ingredientes">Pão brioche, burguer 140g, mussarela, bacon, cebola caramelizada,
+                    alface, tomate e maionese da casa.
+                    <div class="preco">R$ 21,00</div>
                 </div>
-                <div class="cardapio-container">
-                    <div class="cardapio-item">
-                        <div class="card-imagem">
-                            <img src="https://img.freepik.com/fotos-premium/suculenta-carne-de-porco-desfiada-para-churrasco-em-um-fumeiro-criado-com-ia-generativa_419341-53218.jpg"
-                                alt="Barbecue Explosivo">
-                        </div>
-                        <div class="card-conteudo">
-                            <h3>🥓DESIRE</h3>
-                            <div class="ingredientes">Pão brioche, burguer 140g, creme de cheddar, bacon, cebola roxa,
-                                alface, tomate e maionese da casa.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 24,90</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( '🥓DESIRE', 24.90)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+        </div>
 
-                    <div class="cardapio-item">
-                        <div class="card-imagem">
-                            <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
-                                alt="Frango Crocante">
-                        </div>
-                        <div class="card-conteudo">
-                            <h3>🍔MR. JONES </h3>
-                            <div class="ingredientes">Pão de batata, dois burguers de 140g cada, queijo prato, queijo
-                                mussarela, bacon, picles de cebola roxa, alface, tomate e maionese da casa.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 32,90</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( '🍔MR. JONES', 32.90)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-                        <div class="card-imagem">
-                            <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
-                                alt="Frango Crocante">
-                        </div>
-                        <div class="card-conteudo">
-                            <h3>🍔 SAMARINA</h3>
-                            <div class="ingredientes">Pão brioche, burguer 140g, creme de cheddar cremoso, bacon
-                                crocante, cebola caramelizada e maionese da casa.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 24,90</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( '🍔 SAMARINA', 24.90)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-                        <div class="card-imagem">
-                            <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
-                                alt="Frango Crocante">
-                        </div>
-                        <div class="card-conteudo">
-                            <h3>🍔SANTERIA</h3>
-                            <div class="ingredientes">Pão brioche, burguer 140g, queijo mussarela, carne filetada,
-                                bacon, requeijão cremoso, cebola roxa, alface, tomate e maionese da casa.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 27,90</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( '🍔SANTERIA', 27.90)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-                        <div class="card-imagem">
-                            <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
-                                alt="Frango Crocante">
-                        </div>
-                        <div class="card-conteudo">
-                            <h3>🍔 PENELOPE</h3>
-                            <div class="ingredientes">Pão de batata, burguer de 180g, creme de cheddar cremoso, bacon e
-                                maionese da casa.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 24,90</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( '🍔 PENELOPE', 24.90)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-                        <div class="card-imagem">
-                            <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
-                                alt="Frango Crocante">
-                        </div>
-                        <div class="card-conteudo">
-                            <h3>🍔LOS XICOS </h3>
-                            <div class="ingredientes">Pão brioche, burguer 140g, mussarela, bacon, ovo, cebola roxa,
-                                alface, tomate e maionese da casa.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 24,50</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( '🍔LOS XICOS', 24.50)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-                        <div class="card-imagem">
-                            <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
-                                alt="Frango Crocante">
-                        </div>
-                        <div class="card-conteudo">
-                            <h3>🍔 EXAGERADO</h3>
-                            <div class="ingredientes">Pão de batata, dois burguers de 140g cada, dupla camada de queijo
-                                mussarela, dupla camada de bacon, picles de pepino, cebola roxa, alface, tomate e
-                                maionese da casa.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 34,90</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( '🍔 EXAGERADO', 34.90)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-                        <div class="card-imagem">
-                            <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
-                                alt="Frango Crocante">
-                        </div>
-                        <div class="card-conteudo">
-                            <h3>🍔MADALENA</h3>
-                            <div class="ingredientes">Pão brioche, burguer 140g, cheddar, bacon crocante, ovo e maionese
-                                da casa.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 21,90</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( '🍔MADALENA', 21.90)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-                        <div class="card-imagem">
-                            <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
-                                alt="Frango Crocante">
-                        </div>
-                        <div class="card-conteudo">
-                            <h3>🍔SOUL FACTOR </h3>
-                            <div class="ingredientes">Pão de batata, três burguers de 120g cada, tripla camada de
-                                cheddar, dupla camada de bacon, cebola caramelizada e maionese da casa.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 35,99</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( '🍔SOUL FACTOR', 35.99)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-                        <div class="card-imagem">
-                            <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
-                                alt="Frango Crocante">
-                        </div>
-                        <div class="card-conteudo">
-                            <h3>🍔 EVIDÊNCIAS</h3>
-                            <div class="ingredientes">Pão brioche, burguer 140g, queijo mussarela, bacon, abacaxi
-                                caramelizado no açúcar mascavo, alface, tomate e maionese da casa.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 24,99</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( '🍔 EVIDÊNCIAS', 24.99)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-                        <div class="card-imagem">
-                            <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
-                                alt="Frango Crocante">
-                        </div>
-                        <div class="card-conteudo">
-                            <h3>🍔 MARIA MARIA </h3>
-                            <div class="ingredientes">Pão brioche, três burguers 100g cada, tripla camada de queijo
-                                cheddar e mussarela, bacon e maionese da casa.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 32,90</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( '🍔 MARIA MARIA', 32.90)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-                        <div class="card-imagem">
-                            <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
-                                alt="Frango Crocante">
-                        </div>
-                        <div class="card-conteudo">
-                            <h3>🍔 BWANA BWANA</h3>
-                            <div class="ingredientes">Pão de batata, burguer de 140g, queijo mussarela, ovo, bacon,
-                                linguiça calabresa e maionese da casa.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 26,99</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( '🍔 BWANA BWANA', 26.99)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-                        <div class="card-imagem">
-                            <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
-                                alt="Frango Crocante">
-                        </div>
-                        <div class="card-conteudo">
-                            <h3>🍔JOHNSONS</h3>
-                            <div class="ingredientes">Pão de brioche, burguer 140g, queijo mussarela, linguiça suína,
-                                bacon, geleia de pimenta e maionese de bacon.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 27,99</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( '🍔JOHNSONS', 27.99)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-                        <div class="card-imagem">
-                            <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
-                                alt="Frango Crocante">
-                        </div>
-                        <div class="card-conteudo">
-                            <h3>🍔MANIA DE VOCÊ</h3>
-                            <div class="ingredientes">Pão de batata, burguer de 140g, bacon, mussarela, geleia de
-                                pimenta, cebola roxa, ovo, picles de pepino, alface, tomate e maionese da casa.
 
-                            </div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 29,50</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( '🍔MANIA DE VOCÊ', 29.50)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+        <div class="cardapio-item">
+            <div class="card-imagem">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCoUhMnPmRh4ILmy00z6avGA5amn6L_eCCRg&s"
+                    alt="X-Fogo">
+            </div>
+            <div class="-conteudo">
+                <h3>SMASH</h3>
+                <div class="ingredientes">Pão brioche, burguer 90g, mussarela e maionese da casa. <div class="preco">R$
+                        14,50</div>
                 </div>
 
             </div>
-        </section>
-        <section id="adicionais">
-            <div class="acompanhamentos-container">
-                <h2>🍟🍟 ADICIONAIS</h2>
-                <div class="cardapio-container">
-                    <div class="cardapio-item">
-                        <!-- <div class="card-imagem">
-                                 <img src="https://blog-obahortifruti.redeoba.com.br/wp-content/uploads/2022/11/260-88_TEXTO-BLOG-EXTRA-BATATAS-FRESCAS-NOV-22-1920X792.jpg" 
-                                    alt="Batata Rústica com Páprica">
-                            </div>-->
-                        <div class="card-conteudo">
-                            <h3>Hambúrguer 140g</h3>
-                            <div class="ingredientes">Batatas rústicas temperadas com páprica e ervas.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 9,00</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( 'Hambúrguer 140g', 9)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-                        <!--  <div class="card-imagem">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwHBFauCfSqE9gxI-GV4pwgwNT8LrApNHFew&s"
-                                    alt="Onion Rings Crocantes">
-                            </div>-->
-                        <div class="card-conteudo">
-                            <h3>Cheddar / Mussarela </h3>
-                            <div class="ingredientes">Anéis de cebola empanados e crocantes.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 3,00</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho(  'Cheddar / Mussarela', 3)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-                        <!-- <div class="card-imagem">
-                                 <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2020/05/28/shutterstock224976742-1024x684.jpg"
-                                    alt="Molho Sabor & Brasa">
-                            </div>-->
-                        <div class="card-conteudo">
-                            <h3>Creme de Cheddar</h3>
-                            <div class="ingredientes">Escolha: Defumado ou Picante.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 5,00</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( 'Creme de Cheddar', 5)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-                        <!-- <div class="card-imagem">
-                         <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2020/05/28/shutterstock224976742-1024x684.jpg"
-                                    alt="Molho Sabor & Brasa">
-                            </div>-->
-                        <div class="card-conteudo">
-                            <h3>Picles (pepino / cebola)</h3>
-                            <div class="ingredientes">Escolha: Defumado ou Picante.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 2,50</div>
-                                <button class="adicionar-btn"
-                                    onclick="adicionarCarrinho( 'Picles (pepino / cebola)', 2.50)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-                        <!-- <div class="card-imagem">
-                                <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2020/05/28/shutterstock224976742-1024x684.jpg"
-                                    alt="Molho Sabor & Brasa">
-                            </div>-->
-                        <div class="card-conteudo">
-                            <h3>Bacon </h3>
-                            <div class="ingredientes">Escolha: Defumado ou Picante.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 3,50</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( 'Bacon', 3.50)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-                        <!--  <div class="card-imagem">
-                                 <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2020/05/28/shutterstock224976742-1024x684.jpg"
-                                    alt="Molho Sabor & Brasa">
-                            </div>-->
-                        <div class="card-conteudo">
-                            <h3>Geleia de Pimenta</h3>
-                            <div class="ingredientes">Escolha: Defumado ou Picante.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 5,00</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( 'Geleia de Pimenta', 5)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-                        <!--<div class="card-imagem">
-                                 <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2020/05/28/shutterstock224976742-1024x684.jpg"
-                                    alt="Molho Sabor & Brasa">
-                            </div>-->
-                        <div class="card-conteudo">
-                            <h3>Cebola Caramelizada</h3>
-                            <div class="ingredientes">Escolha: Defumado ou Picante.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 3,00</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( 'Cebola Caramelizada', 3)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-                        <!--<div class="card-imagem">
-                                 <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2020/05/28/shutterstock224976742-1024x684.jpg"
-                                    alt="Molho Sabor & Brasa">
-                            </div>-->
-                        <div class="card-conteudo">
-                            <h3>Maionese / Molho</h3>
-                            <div class="ingredientes">Escolha: Defumado ou Picante.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 2,00</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( 'Maionese / Molho', 2)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
+        </div>
 
-                        <div class="card-conteudo">
-                            <h3>Ovo </h3>
-                            <div class="ingredientes">Escolha: Defumado ou Picante.</div>
-                            <div class="card-rodape">
-                                <div class="preco">R$ 2,00</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( 'Ovo', 2)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="cardapio-item">
+            <div class="card-imagem">
+                <img src="https://s2-casavogue.glbimg.com/GRF9KCq-1hiz5uSs-xX9Go_KqIc=/0x0:2048x1365/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_d72fd4bf0af74c0c89d27a5a226dbbf8/internal_photos/bs/2022/p/X/eb4KQdToys327cGqnRGg/receita-ceboloni-bacon.jpg"
+                    alt="X-Cheddar Cremoso">
             </div>
-        </section>
-        <section id="bebidas">
-            <div class="bebidas-sobremesas-container">
-                <h2>🥤 BEBIDAS</h2>
-                <div class="cardapio-container">
-                    <div class="cardapio-item">
-
-                        <div class="card-conteudo">
-                            <h3>Sucos Naturais 350ml</h3>
-                            <!--<div class="ingredientes">Lata 350ml</div>-->
-                            <div class="card-rodape">
-                                <div class="preco">R$ 9,00</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( 'Suco Natural 350ml', 9)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-
-                        <div class="card-conteudo">
-                            <h3>Suco Caixinha</h3>
-                            <!--<div class="ingredientes">Lata 350ml</div>-->
-                            <div class="card-rodape">
-                                <div class="preco">R$ 3,00</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho(  'Suco Caixinha',3 )">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-
-                        <div class="card-conteudo">
-                            <h3>Água Mineral</h3>
-                            <!--<div class="ingredientes">Lata 350ml</div>-->
-                            <div class="card-rodape">
-                                <div class="preco">R$ 3,50</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( 'Água Mineral', 3.50)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-
-                        <div class="card-conteudo">
-                            <h3>Guaraná Antarctica 1,5L</h3>
-                            <!--<div class="ingredientes">Lata 350ml</div>-->
-                            <div class="card-rodape">
-                                <div class="preco">R$ 12,00</div>
-                                <button class="adicionar-btn"
-                                    onclick="adicionarCarrinho( 'Guaraná Antarctica 1,5L', 12)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-
-                        <div class="card-conteudo">
-                            <h3>Coca-Cola 2L</h3>
-                            <!--<div class="ingredientes">Lata 350ml</div>-->
-                            <div class="card-rodape">
-                                <div class="preco">R$ 12,00</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( 'Coca-Cola 2L', 12)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-
-                        <div class="card-conteudo">
-                            <h3>Coca-Cola Lata 310ml</h3>
-                            <!--<div class="ingredientes">Lata 350ml</div>-->
-                            <div class="card-rodape">
-                                <div class="preco">R$ 13,50</div>
-                                <button class="adicionar-btn"
-                                    onclick="adicionarCarrinho( 'Coca-Cola Lata 310ml', 13.50)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-
-                        <div class="card-conteudo">
-                            <h3>Guaraná Antarctica 350ml</h3>
-                            <!--<div class="ingredientes">Lata 350ml</div>-->
-                            <div class="card-rodape">
-                                <div class="preco">R$ 5,50</div>
-                                <button class="adicionar-btn"
-                                    onclick="adicionarCarrinho( 'Guaraná Antarctica 350ml', 5.50)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-
-                        <div class="card-conteudo">
-                            <h3>Coca-Cola Retornável 2L</h3>
-                            <!--<div class="ingredientes">Lata 350ml</div>-->
-                            <div class="card-rodape">
-                                <div class="preco">R$ 5,50</div>
-                                <button class="adicionar-btn"
-                                    onclick="adicionarCarrinho( 'Coca-Cola Retornável 2L', 5.50)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-
-                        <div class="card-conteudo">
-                            <h3>Heineken 330ml</h3>
-                            <!--<div class="ingredientes">Lata 350ml</div>-->
-                            <div class="card-rodape">
-                                <div class="preco">R$ 10,90</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( 'Heineken 330ml', 10.90)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-
-                        <div class="card-conteudo">
-                            <h3>Amstel 350ml</h3>
-                            <!--<div class="ingredientes">Lata 350ml</div>-->
-                            <div class="card-rodape">
-                                <div class="preco">R$ 9,00</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( 'Amstel 350ml', 9)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardapio-item">
-
-                        <div class="card-conteudo">
-                            <h3>H2OH</h3>
-                            <!--<div class="ingredientes">Lata 350ml</div>-->
-                            <div class="card-rodape">
-                                <div class="preco">R$ 6,00</div>
-                                <button class="adicionar-btn" onclick="adicionarCarrinho( 'H2OH', 6)">
-                                    <span>+</span> Adicionar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+            <div class="-conteudo">
+                <h3>SELENITA</h3>
+                <div class="ingredientes">Pão brioche, burguer 140g, cheddar, bacon, cebola caramelizada,
+                    alface, tomate e maionese da casa.<div class="preco">R$ 21,00</div>
                 </div>
+
             </div>
-        </section>
+        </div>
 
-        <section id="acompanhamentos">
-            <h2>🍟ACOMPANHAMENTOS</h2>
-            <div class="cardapio-container">
-                <div class="cardapio-item">
-                    <div class="card-imagem">
-                        <img src="https://swiftbr.vteximg.com.br/arquivos/ids/201377-450-450/622291-batata-airfryer-extra-croc-mccain_3.jpg?v=638657204471230000"
-                            alt="Brownie quente com sorvete">
-                    </div>
-                    <div class="card-conteudo">
-                        <h3>BATATA FRITA 200G</h3>
-                        <!--<div class="ingredientes">Lata 350ml</div>-->
-                        <div class="card-rodape">
-                            <div class="preco">R$ 10,00</div>
-                            <button class="adicionar-btn" onclick="adicionarCarrinho('BATATA FRITA 200G', 10)">
-                                <span>+</span> Adicionar
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="cardapio-item">
-                    <div class="card-imagem">
-                        <img src="https://swiftbr.vteximg.com.br/arquivos/ids/201377-450-450/622291-batata-airfryer-extra-croc-mccain_3.jpg?v=638657204471230000 "
-                            alt="Mini churros recheados">
-                    </div>
-                    <div class="card-conteudo">
-                        <h3>BATATA FRITA 350G</h3>
-                        <!--<div class="ingredientes">Lata 350ml</div>-->
-                        <div class="card-rodape">
-                            <div class="preco">R$ 18,00</div>
-                            <button class="adicionar-btn" onclick="adicionarCarrinho( 'BATATA FRITA 350G', 18)">
-                                <span>+</span> Adicionar
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="cardapio-item">
-                    <div class="card-imagem">
-                        <img src="https://swiftbr.vteximg.com.br/arquivos/ids/201377-450-450/622291-batata-airfryer-extra-croc-mccain_3.jpg?v=638657204471230000"
-                            alt="Mini churros recheados">
-                    </div>
-                    <div class="card-conteudo">
-                        <h3>BATATA CHEDDAR E BACON</h3>
-                        <P>PORÇÃO COM 15 UNDS.</P>
-                        <!--<div class="ingredientes">Lata 350ml</div>-->
-                        <div class="card-rodape">
-                            <div class="preco">R$ 22,99</div>
-                            <button class="adicionar-btn" onclick="adicionarCarrinho( 'BATATA CHEDDAR E BACON', 22.99)">
-                                <span>+</span> Adicionar
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="cardapio-item">
-                    <div class="card-imagem">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOJWwhHnnuM7idU7ksyzXq7KmcvL6Ndq2NQg&s"
-                            alt="Mini churros recheados">
-                    </div>
-                    <div class="card-conteudo">
-                        <h3>BOLINHAS DE QUEIJO</h3>
-                        <P>PORÇÃO COM 15 UNDS.</P>
-                        <!--<div class="ingredientes">Lata 350ml</div>-->
-                        <div class="card-rodape">
-                            <div class="preco">R$ 22,00</div>
-                            <button class="adicionar-btn" onclick="adicionarCarrinho( 'BOLINHAS DE QUEIJO', 22)">
-                                <span>+</span> Adicionar
-                            </button>
-                        </div>
-                    </div>
-                </div>
+        <div class="cardapio-item">
+            <div class="card-imagem">
+                <img src="https://img.freepik.com/fotos-premium/suculenta-carne-de-porco-desfiada-para-churrasco-em-um-fumeiro-criado-com-ia-generativa_419341-53218.jpg"
+                    alt="Barbecue Explosivo">
             </div>
+            <div class="-conteudo">
+                <h3>DESIRE</h3>
+                <div class="ingredientes">Pão brioche, burguer 140g, creme de cheddar, bacon, cebola roxa,
+                    alface, tomate e maionese da casa.<div class="preco">R$ 24,90</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cardapio-item">
+            <div class="card-imagem">
+                <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
+                    alt="Frango Crocante">
+            </div>
+            <div class="-conteudo">
+                <h3>MR.JONES </h3>
+                <div class="ingredientes">Pão de batata, dois burguers de 140g cada, queijo prato, queijo
+                    mussarela, bacon, picles de cebola roxa, alface, tomate e maionese da casa. <div class="preco">
+                        R$ 32,90</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="cardapio-item">
+            <div class="card-imagem">
+                <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
+                    alt="Frango Crocante">
+            </div>
+            <div class="-conteudo">
+                <h3>SAMARINA</h3>
+                <div class="ingredientes">Pão brioche, burguer 140g, creme de cheddar cremoso, bacon
+                    crocante, cebola caramelizada e maionese da casa. <div class="preco">R$ 24,90</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="cardapio-item">
+            <div class="card-imagem">
+                <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
+                    alt="Frango Crocante">
+            </div>
+            <div class="-conteudo">
+                <h3>SANTERIA</h3>
+                <div class="ingredientes">Pão brioche, burguer 140g, queijo mussarela, carne filetada,
+                    bacon, requeijão cremoso, cebola roxa, alface, tomate e maionese da casa. <div class="preco">R$
+                        27,90</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="cardapio-item">
+            <div class="card-imagem">
+                <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
+                    alt="Frango Crocante">
+            </div>
+            <div class="-conteudo">
+                <h3>PENELOPE</h3>
+                <div class="ingredientes">Pão de batata, burguer de 180g, creme de cheddar cremoso, bacon e
+                    maionese da casa. <div class="preco">R$ 24,90</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="cardapio-item">
+            <div class="card-imagem">
+                <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
+                    alt="Frango Crocante">
+            </div>
+            <div class="-conteudo">
+                <h3>LOS XICOS </h3>
+                <div class="ingredientes">Pão brioche, burguer 140g, mussarela, bacon, ovo, cebola roxa,
+                    alface, tomate e maionese da casa. <div class="preco">R$ 24,50</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="cardapio-item">
+            <div class="card-imagem">
+                <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
+                    alt="Frango Crocante">
+            </div>
+            <div class="-conteudo">
+                <h3>EXAGERADO</h3>
+                <div class="ingredientes">Pão de batata, dois burguers de 140g cada, dupla camada de queijo
+                    mussarela, dupla camada de bacon, picles de pepino, cebola roxa, alface, tomate e
+                    maionese da casa.
+                    <div class="preco">R$ 34,90</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="cardapio-item">
+            <div class="card-imagem">
+                <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
+                    alt="Frango Crocante">
+            </div>
+            <div class="-conteudo">
+                <h3>MADALENA</h3>
+                <div class="ingredientes">Pão brioche, burguer 140g, cheddar, bacon crocante, ovo e maionese
+                    da casa. <div class="preco">R$ 21,90</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="cardapio-item">
+            <div class="card-imagem">
+                <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
+                    alt="Frango Crocante">
+            </div>
+            <div class="-conteudo">
+                <h3>SOUL FACTOR </h3>
+                <div class="ingredientes">Pão de batata, três burguers de 120g cada, tripla camada de
+                    cheddar, dupla camada de bacon, cebola caramelizada e maionese da casa.
+                    <div class="preco">R$ 35,99</div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="cardapio-item">
+            <div class="card-imagem">
+                <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
+                    alt="Frango Crocante">
+            </div>
+            <div class="-conteudo">
+                <h3>EVIDÊNCIAS</h3>
+                <div class="ingredientes">Pão brioche, burguer 140g, queijo mussarela, bacon, abacaxi
+                    caramelizado no açúcar mascavo, alface, tomate e maionese da casa.
+                    <div class="preco">R$ 24,99</div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="cardapio-item">
+            <div class="card-imagem">
+                <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
+                    alt="Frango Crocante">
+            </div>
+            <div class="-conteudo">
+                <h3>MARIA MARIA </h3>
+                <div class="ingredientes">Pão brioche, três burguers 100g cada, tripla camada de queijo
+                    cheddar e mussarela, bacon e maionese da casa. <div class="preco">R$ 32,90</div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="cardapio-item">
+            <div class="card-imagem">
+                <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
+                    alt="Frango Crocante">
+            </div>
+            <div class="conteudo">
+                <h3>BWANA BWANA</h3>
+                <div class="ingredientes">Pão de batata, burguer de 140g, queijo mussarela, ovo, bacon,
+                    linguiça calabresa e maionese da casa. <div class="preco">R$ 26,99</div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="cardapio-item">
+            <div class="card-imagem">
+                <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
+                    alt="Frango Crocante">
+            </div>
+            <div class="card-conteudo">
+                <h3>JOHNSONS</h3>
+                <div class="ingredientes">Pão de brioche, burguer 140g, queijo mussarela, linguiça suína,
+                    bacon, geleia de pimenta e maionese de bacon. <div class="preco">R$ 27,99</div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="cardapio-item">
+            <div class="card-imagem">
+                <img src="https://guiadacozinha.com.br/wp-content/uploads/2020/03/hamburguer-de-quinoa-vegetariano.jpg"
+                    alt="Frango Crocante">
+            </div>
+            <div class="card-conteudo">
+                <h3>MANIA DE VOCÊ</h3>
+                <div class="ingredientes">Pão de batata, burguer de 140g, bacon, mussarela, geleia de
+                    pimenta, cebola roxa, ovo, picles de pepino, alface, tomate e maionese da casa.
+                    <div class="preco">R$ 29,50</div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        </div>
+
+
+    </section>
+    <section id="adicionais">
+  <h3 align="center" class="ad">🍟🍟 ADICIONAIS</h2>
+  
+  <div class="lista-adicionais">
+    <!-- Item 1 -->
+    <div class="adicional-item">
+      <h3>Hambúrguer 140g</h3>
+      <div class="adicional-detalhes">
+        <span class="descricao">Batatas rústicas temperadas com páprica e ervas.</span>
+        <span class="preco">R$ 9,00</span>
+      </div>
     </div>
+    
+    <!-- Item 2 -->
+    <div class="adicional-item">
+      <h3>Cheddar / Mussarela</h3>
+      <div class="adicional-detalhes">
+        <span class="descricao">Anéis de cebola empanados e crocantes.</span>
+        <span class="preco">R$ 3,00</span>
+      </div>
+    </div>
+    
+    <!-- Item 3 -->
+    <div class="adicional-item">
+      <h3>Creme de Cheddar</h3>
+      <div class="adicional-detalhes">
+        <span class="descricao">Escolha: Defumado ou Picante.</span>
+        <span class="preco">R$ 5,00</span>
+      </div>
+    </div>
+    
+    <!-- Item 4 -->
+    <div class="adicional-item">
+      <h3>Picles (pepino / cebola)</h3>
+      <div class="adicional-detalhes">
+        <span class="descricao">Tradicional ou picante.</span>
+        <span class="preco">R$ 2,50</span>
+      </div>
+    </div>
+    
+    <!-- Item 5 -->
+    <div class="adicional-item">
+      <h3>Bacon</h3>
+      <div class="adicional-detalhes">
+        <span class="descricao">Crocante ou defumado.</span>
+        <span class="preco">R$ 3,50</span>
+      </div>
+    </div>
+    
+    <!-- Item 6 -->
+    <div class="adicional-item">
+      <h3>Geleia de Pimenta</h3>
+      <div class="adicional-detalhes">
+        <span class="descricao">Suave ou extra picante.</span>
+        <span class="preco">R$ 5,00</span>
+      </div>
+    </div>
+    
+    <!-- Item 7 -->
+    <div class="adicional-item">
+      <h3>Cebola Caramelizada</h3>
+      <div class="adicional-detalhes">
+        <span class="descricao">Tradicional ou com bacon.</span>
+        <span class="preco">R$ 3,00</span>
+      </div>
+    </div>
+    
+    <!-- Item 8 -->
+    <div class="adicional-item">
+      <h3>Maionese / Molho</h3>
+      <div class="adicional-detalhes">
+        <span class="descricao">6 opções disponíveis.</span>
+        <span class="preco">R$ 2,00</span>
+      </div>
+    </div>
+    
+    <!-- Item 9 -->
+    <div class="adicional-item">
+      <h3>Ovo</h3>
+      <div class="adicional-detalhes">
+        <span class="descricao">Pode ser mexido ou frito.</span>
+        <span class="preco">R$ 2,00</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section id="bebidas">
+  <h3 align="center"class="ad">🥤 BEBIDAS</h2>
+  
+  <div class="lista-bebidas">
+    <!-- Item 1 -->
+    <div class="bebida-item">
+      <h3>Sucos Naturais 350ml</h3>
+      <div class="bebida-rodape">
+        <span class="preco">R$ 9,00</span>
+      </div>
+    </div>
+    
+    <!-- Item 2 -->
+    <div class="bebida-item">
+      <h3>Suco Caixinha</h3>
+      <div class="bebida-rodape">
+        <span class="preco">R$ 3,00</span>
+      </div>
+    </div>
+    
+    <!-- Item 3 -->
+    <div class="bebida-item">
+      <h3>Água Mineral</h3>
+      <div class="bebida-rodape">
+        <span class="preco">R$ 3,50</span>
+      </div>
+    </div>
+    
+    <!-- Item 4 -->
+    <div class="bebida-item">
+      <h3>Guaraná Antarctica 1,5L</h3>
+      <div class="bebida-rodape">
+        <span class="preco">R$ 12,00</span>
+      </div>
+    </div>
+    
+    <!-- Item 5 -->
+    <div class="bebida-item">
+      <h3>Coca-Cola 2L</h3>
+      <div class="bebida-rodape">
+        <span class="preco">R$ 12,00</span>
+      </div>
+    </div>
+    
+    <!-- Item 6 -->
+    <div class="bebida-item">
+      <h3>Coca-Cola Lata 310ml</h3>
+      <div class="bebida-rodape">
+        <span class="preco">R$ 13,50</span>
+      </div>
+    </div>
+    
+    <!-- Item 7 -->
+    <div class="bebida-item">
+      <h3>Guaraná Antarctica 350ml</h3>
+      <div class="bebida-rodape">
+        <span class="preco">R$ 5,50</span>
+      </div>
+    </div>
+    
+    <!-- Item 8 -->
+    <div class="bebida-item">
+      <h3>Coca-Cola Retornável 2L</h3>
+      <div class="bebida-rodape">
+        <span class="preco">R$ 5,50</span>
+      </div>
+    </div>
+    
+    <!-- Item 9 -->
+    <div class="bebida-item">
+      <h3>Heineken 330ml</h3>
+      <div class="bebida-rodape">
+        <span class="preco">R$ 10,90</span>
+      </div>
+    </div>
+    
+    <!-- Item 10 -->
+    <div class="bebida-item">
+      <h3>Amstel 350ml</h3>
+      <div class="bebida-rodape">
+        <span class="preco">R$ 9,00</span>
+      </div>
+    </div>
+    
+    <!-- Item 11 -->
+    <div class="bebida-item">
+      <h3>H2OH</h3>
+      <div class="bebida-rodape">
+        <span class="preco">R$ 6,00</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="acompanhamentos">
+        <h2 align="center">🍟ACOMPANHAMENTOS</h2>
+
+        <div class="cardapio-item">
+            <div class="card-imagem">
+                 <img src="https://swiftbr.vteximg.com.br/arquivos/ids/201377-450-450/622291-batata-airfryer-extra-croc-mccain_3.jpg?v=638657204471230000"
+                        alt="Brownie quente com sorvete">
+            </div>
+            <div class="-conteudo">
+               <h3>BATATA FRITA 200G</h3>
+              <div class="preco">R$ 10,00</div>
+                </div>
+            </div>
+        </div>
+
+           
+            <div class="cardapio-item">
+                <div class="card-imagem">
+                    <img src="https://swiftbr.vteximg.com.br/arquivos/ids/201377-450-450/622291-batata-airfryer-extra-croc-mccain_3.jpg?v=638657204471230000 "
+                        alt="Mini churros recheados">
+                </div>
+                <div class="card-conteudo">
+                    <h3>BATATA FRITA 350G</h3>
+                    <!--<div class="ingredientes">Lata 350ml</div>-->
+                    <div class="card-rodape">
+                        <div class="preco">R$ 18,00</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="cardapio-item">
+                <div class="card-imagem">
+                    <img src="https://swiftbr.vteximg.com.br/arquivos/ids/201377-450-450/622291-batata-airfryer-extra-croc-mccain_3.jpg?v=638657204471230000"
+                        alt="Mini churros recheados">
+                </div>
+                <div class="card-conteudo">
+                    <h3>BATATA CHEDDAR E BACON</h3>
+                    <P>PORÇÃO COM 15 UNDS.</P>
+                    <!--<div class="ingredientes">Lata 350ml</div>-->
+                    <div class="card-rodape">
+                        <div class="preco">R$ 22,99</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="cardapio-item">
+                <div class="card-imagem">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOJWwhHnnuM7idU7ksyzXq7KmcvL6Ndq2NQg&s"
+                        alt="Mini churros recheados">
+                </div>
+                <div class="card-conteudo">
+                    <h3>BOLINHAS DE QUEIJO</h3>
+                    <P>PORÇÃO COM 15 UNDS.</P>
+                    <!--<div class="ingredientes">Lata 350ml</div>-->
+                    <div class="card-rodape">
+                        <div class="preco">R$ 22,00</div>
+
+                    </div>
+                </div>
+            </div>
+       
+
     </section>
     </div>
+    </div>
 
 
-    <section class="carrinho-container" id="carrinho">
-        <h2>🛒 Seu Pedido Imperial</h2>
+
+
+    <!-- <section class="carrinho-container" id="carrinho">
+     <h2>🛒 Seu Pedido Imperial</h2>
         <ul id="lista-carrinho"></ul>
 
 
@@ -763,14 +595,9 @@
             <option value="entrega">Entrega</option>
             <option value="retirada">Retirar no local</option>
         </select>
+        </section>-->
 
-        <div id="tempo-espera">
-            ⏱️ <strong>Tempo médio de preparo:</strong> 30-40 minutos
-        </div>
-    </section>
-
-
-    <section class="info-cliente">
+    <!--   <section class="info-cliente">
         <h2>📋 Informações do Cliente</h2>
 
         <div class="form-group">
@@ -796,17 +623,17 @@
         <div class="form-group">
             <label for="casa">Casa</label>
             <input type="text" id="casa" placeholder="Digite o numero de sua casa." required style="flex: 1;">
-        </div>
+        </div>-->
 
 
 
 
 
 
-        <!-- Opcional: Link para o Font Awesome se não estiver incluído -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Opcional: Link para o Font Awesome se não estiver incluído -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-        <div class="form-group">
+    <!-- <div class="form-group">
             <label for="observacoes">Observações</label>
             <textarea id="observacoes" placeholder="Alergias, modificações ou pedidos especiais"></textarea>
         </div>
@@ -820,7 +647,7 @@
         <div class="spinner"></div>
         <p>Preparando seu pedido imperial...</p>
     </div>
-    </div>
+    </div>-->
 
     <footer class="footer">
         <div class="footer-content">
@@ -845,199 +672,18 @@
         </div>
     </footer>
     <script>
-        const taxaEntrega = 8.50; // R$ 8,50
-        const carrinho = [];
-        const numeroWhatsApp = '5561981227195'; // Número do restaurante
+    document.querySelector('.dropdown-toggle').addEventListener('click', function() {
+  this.parentElement.classList.toggle('active');
+});
 
-        let entregaAtiva = true; // por padrão começa como "entrega"
-
-       document.getElementById('tipoEntrega').addEventListener('change', function() {
-    entregaAtiva = (this.value === 'entrega');
-    atualizarCarrinho();
-
-    const info = document.getElementById('infoEntrega');
-    if (entregaAtiva) {
-        info.textContent = `🚚 Entrega selecionada (R$ ${taxaEntrega.toFixed(2).replace('.', ',')})`;
-        info.classList.remove('retirada');
-        info.classList.add('entrega');
-    } else {
-        info.textContent = "🏠 Retirada no local (sem taxa)";
-        info.classList.remove('entrega');
-        info.classList.add('retirada');
-    }
-}); 
-
-        function adicionarCarrinho(item, preco) {
-            carrinho.push({ item, preco });
-            atualizarCarrinho();
-            mostrarNotificacao(`✔️ ${item} adicionado ao carrinho!`);
-
-            const buttons = document.querySelectorAll('.adicionar-btn');
-            buttons.forEach(btn => {
-                if (btn.textContent.includes(item)) {
-                    btn.classList.add('destaque');
-                    setTimeout(() => btn.classList.remove('destaque'), 2000);
-                }
-            });
-        }
-
-        function removerCarrinho(index) {
-            const itemRemovido = carrinho[index].item;
-            carrinho.splice(index, 1);
-            atualizarCarrinho();
-            mostrarNotificacao(`❌ ${itemRemovido} removido do carrinho`, 'erro');
-        }
-
-        function atualizarCarrinho() {
-            const lista = document.getElementById('lista-carrinho');
-            const total = document.getElementById('total');
-            lista.innerHTML = '';
-
-            if (carrinho.length === 0) {
-                lista.innerHTML = '<li class="empty-cart">Seu carrinho está vazio</li>';
-                total.textContent = 'Total: R$ 0,00';
-                return;
-            }
-
-            let soma = 0;
-            carrinho.forEach(({ item, preco }, i) => {
-                const li = document.createElement('li');
-                li.className = 'carrinho-item';
-                li.innerHTML = `
-            <span>${item} - R$ ${preco.toFixed(2).replace('.', ',')}</span>
-            <button class="remover-btn" onclick="removerCarrinho(${i})">Remover</button>
-        `;
-                lista.appendChild(li);
-                soma += preco;
-            });
-
-            // Adiciona taxa de entrega somente se entregaAtiva for true
-            if (carrinho.length > 0 && entregaAtiva) {
-                const liTaxa = document.createElement('li');
-                liTaxa.className = 'carrinho-item taxa-entrega';
-                liTaxa.innerHTML = `<span>🚚 Taxa de entrega - R$ ${taxaEntrega.toFixed(2).replace('.', ',')}</span>`;
-                lista.appendChild(liTaxa);
-                soma += taxaEntrega;
-            }
-
-            total.textContent = `Total: R$ ${soma.toFixed(2).replace('.', ',')}`;
-        }
-
-        function mostrarNotificacao(mensagem, tipo = 'sucesso') {
-            const notificacao = document.createElement('div');
-            notificacao.className = `notificacao ${tipo === 'erro' ? 'erro' : ''}`;
-            notificacao.innerHTML = `
-        ${tipo === 'erro' ? '❌' : '✔️'} ${mensagem}
-    `;
-
-            document.body.appendChild(notificacao);
-
-            setTimeout(() => {
-                notificacao.classList.add('show');
-            }, 100);
-
-            setTimeout(() => {
-                notificacao.classList.remove('show');
-                setTimeout(() => {
-                    document.body.removeChild(notificacao);
-                }, 400);
-            }, 3000);
-        }
-
-        function enviarPedido() {
-            const nome = document.getElementById('nome').value.trim();
-            const bairro = document.getElementById('bairro').value.trim();
-            const endereco_rua = document.getElementById(' endereco_rua').value.trim();
-            const quadra = document.getElementById('quadra').value.trim();
-            const casa = document.getElementById('casa').value.trim();
-            const observacoes = document.getElementById('observacoes').value.trim();
-
-            if (!nome) {
-                mostrarNotificacao('Por favor, informe seu nome completo.', 'erro');
-                document.getElementById('nome').focus();
-                return;
-            }
-            if (!bairro) {
-                mostrarNotificacao('Por favor, informe seu bairro.', 'erro');
-                document.getElementById('bairro').focus();
-                return;
-            }
-            if (!endereco_rua) {
-                mostrarNotificacao('Por favor, informe sua RUA para entrega.', 'erro');
-                document.getElementById(' endereco_rua').focus();
-                return;
-            }
-            if (!quadra) {
-                mostrarNotificacao('Por favor, informe sua QUADRA.', 'erro');
-                document.getElementById('quadra').focus();
-                return;
-            }
-            if (!casa) {
-                mostrarNotificacao('Por favor, informe o número da sua CASA.', 'erro');
-                document.getElementById('casa').focus();
-                return;
-            }
-            if (carrinho.length === 0) {
-                mostrarNotificacao('Seu carrinho está vazio. Adicione itens!', 'erro');
-                return;
-            }
-
-            document.getElementById('loading').style.display = 'block';
-            document.querySelector('.enviar-btn').disabled = true;
-
-            let mensagem = `*🍔 PEDIDO - CASA DO HAMBURGUER🍔*\n\n` +
-                `👤 *Cliente:* ${nome}\n\n ` +
-                `📍 *Bairro:* ${bairro}\n\n` +
-                `📍 *Rua:* ${endereco_rua}\n\n` +
-                `🏠 *Quadra:* ${quadra}\n\n` +
-                `🏠 *Casa:* ${casa}\n\n` +
-                `🍽️ *Itens do Pedido:*\n`;
-
-            carrinho.forEach(({ item, preco }) => {
-                mensagem += `✔️ ${item} - R$ ${preco.toFixed(2).replace('.', ',')}\n`;
-            });
-
-            // Calcular total com ou sem taxa
-            const total = carrinho.reduce((s, i) => s + i.preco, 0) + (entregaAtiva ? taxaEntrega : 0);
-
-            if (entregaAtiva) {
-                mensagem += `\n🚚 *Taxa de entrega:* R$ ${taxaEntrega.toFixed(2).replace('.', ',')}\n`;
-            }
-            mensagem += `💰 *Total:* R$ ${total.toFixed(2).replace('.', ',')}\n\n` +
-                `⏱️ *Tempo estimado:* 30-40 minutos\n\n`;
-
-            if (observacoes) {
-                mensagem += `📝 *Observações:*\n${observacoes}\n\n`;
-            }
-
-            mensagem += `🙏 *Agradecemos pela preferência!*\n` +
-                `🔔 Seu pedido será preparado em breve.`;
-
-            const mensagemCodificada = encodeURIComponent(mensagem);
-            const url = `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`;
-
-            setTimeout(() => {
-                window.open(url, '_blank');
-                document.getElementById('loading').style.display = 'none';
-                document.querySelector('.enviar-btn').disabled = false;
-
-                carrinho.length = 0;
-                atualizarCarrinho();
-                document.getElementById('nome').value = '';
-                document.getElementById('bairro').value = '';
-                document.getElementById('endereco_rua').value = '';
-                document.getElementById('quadra').value = '';
-                document.getElementById('casa').value = '';
-                document.getElementById('observacoes').value = '';
-
-                mostrarNotificacao('✅ Pedido enviado com sucesso!');
-            }, 1500);
-        }
-
-        // Inicializar carrinho vazio
-        atualizarCarrinho();
-
-    </script>
+// Fechar ao clicar fora
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.category-dropdown')) {
+    document.querySelector('.category-dropdown').classList.remove('active');
+  }
+});
+</script>
+    
 </body>
 
 </html>
