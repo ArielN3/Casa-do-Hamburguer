@@ -16,7 +16,6 @@
 }
 
 html {
-
   scroll-behavior: smooth; /* Ativa o scroll suave em toda a página */
   scroll-padding-top: 80px; /* Compensa cabeçalhos fixos */
 }
@@ -31,6 +30,30 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+.header {
+  background: linear-gradient(135deg, #1e1e2f, #292940);
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Segoe UI', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 /* Estilo moderno para o dropdown */
 .category-dropdown {
   position: fixed;
@@ -116,6 +139,43 @@ body {
   right: 0;
   border-radius: 12px 0 12px 12px;
 }
+ .category-dropdown.right-fixed {
+    top: 10px;
+    right: 10px;
+  }
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.menu-item:hover {
+  background: #fff5f5;
+  color: #ff6b6b;
+}
+
+.menu-item span {
+  margin-left: 8px;
+}
+.menu-item::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: #ff6b6b;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover::before {
+  opacity: 1;
+  margin-right: 8px;
+}
 
 /* Mobile: ajuste de posição */
 @media (max-width: 768px) {
@@ -158,6 +218,14 @@ body {
 }
 }
 
+/* Estilos para desktop (dropdown não visível) */
+    @media (min-width: 992px) {
+        .category-dropdown {
+            display: none;
+        }
+    }
+
+    
 .container {
   background-color: #a00;
     max-width: 900px;
@@ -193,29 +261,6 @@ header::after {
 
 /* Header CSS */
 
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
-
-.header {
-  background: linear-gradient(135deg, #1e1e2f, #292940);
-  color: #fff;
-  padding: 15px 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-family: 'Segoe UI', sans-serif;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  background: linear-gradient(90deg, #ff8a00, #e52e71);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 /* ========== ESTILOS DA BARRA DE SCROLL ========== */
 ::-webkit-scrollbar {
@@ -407,7 +452,7 @@ h2 {
   width: 100vw;
 }
 #Hamburgueres{
-   display: grid;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   padding: 15px;
@@ -419,13 +464,38 @@ h2 {
 #acompanhamentos .cardapio-item{
   width: 100vw;
 }
-#acompanhamentos{
-   display: grid;
+#acompanhamentos {
+display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   padding: 15px;
+   
 }
-#acompanja
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #acompanhamentos {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    #acompanhamentos .card-imagem {
+        height: 180px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #acompanhamentos {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+}
+
+@media (min-width: 1600px) {
+    #acompanhamentos {
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+}
 
 .card-imagem img {
   width: 50%;
@@ -952,6 +1022,46 @@ input:focus, textarea:focus {
     letter-spacing: 1px;
     font-size: 0.9rem;
 }
+
+@media (min-width: 992px) {
+    /* Garantir que o dropdown não apareça em desktop */
+    .category-dropdown {
+        display: none;
+    }
+    
+    /* Melhorar espaçamento em desktop */
+    section {
+        padding: 3rem;
+    }
+    
+    /* Grid de 3 colunas para itens em telas muito grandes */
+    #Hamburgueres {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+        align-items: center;
+        gap: 2rem;
+    }
+    #acompanhamentos {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
+        gap: 2rem;
+    }
+    
+    .cardapio-item {
+        flex-direction: column;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 0;
+    }
+    
+    /* Ajustar footer em desktop */
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
 @media (max-width: 600px) {
   .card-imagem {
     flex: 0 0 100px; /* Aumenta a altura da imagem em mobile */
@@ -1052,4 +1162,3 @@ input:focus, textarea:focus {
         font-size: 1.5rem;
     }
 }
-
