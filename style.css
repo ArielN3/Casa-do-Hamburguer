@@ -435,6 +435,7 @@ h2 {
   gap: 20px; /* Espaçamento entre os cards */
   padding: 10px;
 }
+
 .cardapio-item {
   display: flex;          /* Ativa Flexbox */
   gap: 15px;             /* Espaço entre imagem e texto */
@@ -445,6 +446,12 @@ h2 {
   max-width: 600px;      /* Largura máxima do card (opcional) */
 }
 
+.cardapio-item h3{
+  font-size: 1rem;
+  margin: 0 0 10px 0;
+
+}
+
 .card-imagem {
   flex: 0 0 100px;      /* Largura fixa da imagem (não cresce/não encolhe) */
   
@@ -453,6 +460,7 @@ h2 {
 #Hamburgueres .cardapio-item{
   width: 100vw;
 }
+
 #Hamburgueres{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -593,7 +601,7 @@ h2 {
 .adicional-item h3 {
   color: #333;
   margin: 0 0 8px 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
   border-bottom: 1px dashed #eee;
   padding-bottom: 5px;
 }
@@ -652,7 +660,7 @@ h2 {
 .bebida-item h3 {
   color: #333;
   margin: 0 0 8px 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .bebida-rodape {
