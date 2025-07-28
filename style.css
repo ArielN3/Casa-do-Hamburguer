@@ -1,4 +1,6 @@
 
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
 :root {
     --vermelho-chines: #E31837;
     --dourado: #FFD700;
@@ -31,7 +33,7 @@ body {
 }
 
 
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
 
 .header {
   background: linear-gradient(135deg, #1e1e2f, #292940);
@@ -1160,5 +1162,34 @@ input:focus, textarea:focus {
     
     h2 {
         font-size: 1.5rem;
+    }
+}
+/* Responsividade */
+@media (max-width: 768px) { 
+    .cardapio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cardapio-item {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card-imagem {
+        width: 100%;
+        height: auto;
+    }
+    
+    .card-conteudo {
+        text-align: center;
+    }
+    
+    #nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #nav a {
+        margin: 10px 0;
     }
 }
